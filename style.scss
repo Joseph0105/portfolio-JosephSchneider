@@ -137,12 +137,23 @@ body {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  h2 {
-    font-size: 20px;
+  a {
+    text-decoration: none;
   }
-  .projectCard {
-    width: 33%;
-    border: 1px solid gold;
+  h2 {
+    font-size: 25px;
+  }
+}
+.projectCard {
+  width: 33%;
+  height: 300px;
+  border: none;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 .profile {
