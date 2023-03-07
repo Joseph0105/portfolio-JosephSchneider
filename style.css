@@ -1,0 +1,151 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: Lato, Helvetica, sans-serif;
+  background-color: #1d1d1d;
+}
+
+.section-home {
+  padding: 3rem 3rem;
+  height: 100vh;
+  background-image: url(./Images/backgroun-green.png);
+  object-fit: cover;
+}
+.section-home .bar-icon {
+  position: fixed;
+  top: 3rem;
+  right: 3rem;
+  font-size: 50px;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #353535;
+  opacity: 0.8;
+  border-radius: 5px;
+  width: 5rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+.section-home .bar-icon i {
+  color: white;
+  opacity: 1;
+}
+.section-home .bar-icon:hover {
+  opacity: 1;
+}
+.section-home .scroll-down {
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  right: 10px;
+}
+.section-home .scroll-down p {
+  margin-bottom: 10px;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+.section-home .scroll-down i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-home .text-zone {
+  color: white;
+  top: 3rem;
+  position: relative;
+  z-index: 1;
+  font-family: "Anton", sans-serif;
+}
+.section-home .text-zone h1 {
+  font-size: 50px;
+  font-weight: 400;
+}
+.section-home .text-zone h1 span {
+  font-size: 58px;
+  color: #48ff00;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: #faf200;
+  text-shadow: -3px 2px #c6c000;
+}
+.section-home .text-zone p {
+  margin-top: 10px;
+  font-family: "Raleway", sans-serif;
+  color: rgb(198, 198, 198);
+}
+.section-home a {
+  margin-top: 80px;
+  margin-left: 30px;
+  border: 1px solid #0af637;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #48ff00;
+}
+.section-home a:hover {
+  background-color: #0af637;
+  color: white;
+  border: 1px solid white;
+}
+
+.portfolio {
+  padding: 3rem 3rem;
+  height: 100vh;
+}
+.portfolio h2 {
+  color: #faf200;
+  font-family: "Anton", sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+}
+.portfolio p {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: rgb(198, 198, 198);
+}
+
+.projects-display {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+.projects-display h2 {
+  font-size: 20px;
+}
+.projects-display .projectCard {
+  width: 33%;
+  border: 1px solid gold;
+}
+
+.profile {
+  padding: 3rem 3rem;
+}
+.profile h2 {
+  color: #faf200;
+  font-family: "Anton", sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+}
+.profile p {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: rgb(198, 198, 198);
+}
+
+/*# sourceMappingURL=style.css.map */
