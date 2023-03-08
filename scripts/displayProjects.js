@@ -1,31 +1,3 @@
-// !!!!!! FONCTIONS POUR LE PORTFOLIO !!!!!!!!!!!!!
-
-(async function () {
-  const projects = await getProjects();
-  console.log(projects);
-  for (project of projects) {
-    displayProjects(project);
-  }
-})();
-
-function getProjects() {
-  return fetch(`https://api.github.com/users/Joseph0105/repos?per_page=100`, {
-    headers: {
-      Authorization: "Bearer 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",
-    },
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      const repositories = data;
-      const repositoriesDisplay = document.querySelector(".projects-display");
-
-      return repositories;
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-}
-
 function displayProjects(project) {
   const projectsDisplay = document.querySelector(".projects-display");
 
