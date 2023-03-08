@@ -23,7 +23,7 @@
 $text-color-white: #ffff;
 $text-color-grey: rgb(198, 198, 198);
 $text-color-primary: #48ff00;
-$element-color-primary: #0af637;
+$element-color-primary: #0fc730;
 $text-color-teriary: #faf200;
 body {
   min-height: 100vh;
@@ -138,8 +138,9 @@ body {
   margin-top: 3rem;
 
   .projectCard {
-    // min-width: 380px;
     width: 33%;
+    height: 300px;
+    border: 1px solid gold;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -167,13 +168,13 @@ body {
       top: 50%;
       left: 50%;
       width: 40%;
-      height: 70%;
+      height: 50%;
       border-radius: 50%;
-      background-color: $text-color-teriary;
+      background-color: $element-color-primary;
       opacity: 0;
       pointer-events: none;
 
-      animation: showClickHere 0.3s ease-in-out forwards;
+      animation: showClickHere 0.2s ease-in-out forwards;
 
       display: none;
       p {
@@ -181,7 +182,7 @@ body {
         font-size: 80%;
         font-weight: 600;
         font-family: "Raleway", sans-serif;
-        color: black;
+        color: $text-color-white;
 
         margin: 0;
       }
@@ -211,11 +212,12 @@ body {
     }
   }
 
-  img {
+  .project-img {
     width: 100%;
+    height: 300px;
     object-fit: cover;
     display: block;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
 
     &:hover {
       transform: scale(1.1);
