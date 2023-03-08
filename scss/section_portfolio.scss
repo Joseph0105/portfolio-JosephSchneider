@@ -66,29 +66,7 @@
       }
     }
   }
-
-  @media (max-width: 768px) {
-    .projects-display {
-      justify-content: center;
-    }
-    .projectCard {
-      width: 48%;
-    }
-  }
-  @media (max-width: 490px) {
-    .projects-display {
-      justify-content: center;
-    }
-    .projectCard {
-      width: 100%;
-      margin-bottom: 10px;
-    }
-  }
-  @media (min-width: 768px) {
-    .projectCard {
-      width: 33%;
-    }
-  }
+  @import "./media_queries/media_queries_portfolio.scss";
 
   .project-img {
     width: 100%;
