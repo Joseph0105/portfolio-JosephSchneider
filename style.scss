@@ -138,9 +138,9 @@ body {
   margin-top: 3rem;
 
   .projectCard {
+    max-width: 370px;
     width: 33%;
     height: 300px;
-    border: 1px solid gold;
     overflow: hidden;
     position: relative;
     display: flex;
