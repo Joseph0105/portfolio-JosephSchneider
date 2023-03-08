@@ -31,7 +31,7 @@ function displayProjects(project) {
 
   const projectCard = document.createElement("div");
   projectCard.classList.add("projectCard");
-  console.log(projectCard);
+
   const projectLink = document.createElement("a");
   projectLink.classList.add("projectCard-link");
   projectLink.href = `https://joseph0105.github.io/${project.name}/`;
@@ -50,3 +50,27 @@ function displayProjects(project) {
   projectCard.appendChild(projectLink);
   projectsDisplay.appendChild(projectCard);
 }
+
+// !!!!!!! CV !!!!!!!
+
+// Ouvrir le CV
+const cvLink = document.querySelector(".CV-link");
+
+const cvModal = document.querySelector(".cv-modal");
+
+cvLink.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  cvModal.style.display = "block";
+});
+// Fermer le cv
+
+const cvContainer = document.querySelector(".cv-container");
+
+cvModal.addEventListener("click", function (e) {
+  if (e.target === cvContainer) {
+    return;
+  } else {
+    cvModal.style.display = "none";
+  }
+});
