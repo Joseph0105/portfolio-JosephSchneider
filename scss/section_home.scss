@@ -1,0 +1,88 @@
+.section-home {
+  padding: 3rem 3rem;
+  height: 100vh;
+  background-image: url(./Images/backgroun-green.png);
+  object-fit: cover;
+
+  .bar-icon {
+    position: fixed;
+    top: 3rem;
+    right: 3rem;
+    font-size: 50px;
+    z-index: 100;
+    @include center();
+    background-color: #353535;
+    opacity: 0.8;
+    border-radius: 5px;
+    width: 5rem;
+    padding: 1rem;
+    cursor: pointer;
+    i {
+      color: $text-color-white;
+      opacity: 1;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .scroll-down {
+    color: $text-color-white;
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    right: 10px;
+
+    p {
+      margin-bottom: 10px;
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+    }
+    i {
+      @include center();
+    }
+  }
+
+  .text-zone {
+    color: $text-color-white;
+    top: 3rem;
+    position: relative;
+    z-index: 1;
+    font-family: "Anton", sans-serif;
+    h1 {
+      font-size: 50px;
+      font-weight: 400;
+      span {
+        font-size: 58px;
+        color: $text-color-primary;
+        -webkit-text-stroke: 1px;
+        -webkit-text-stroke-color: #faf200;
+        text-shadow: -3px 2px #c6c000;
+      }
+    }
+
+    p {
+      margin-top: 10px;
+      font-family: "Raleway", sans-serif;
+      color: $text-color-grey;
+    }
+  }
+  a {
+    margin-top: 80px;
+    margin-left: 30px;
+    border: 1px solid #0af637;
+    width: 150px;
+    height: 50px;
+    @include center();
+    text-decoration: none;
+    color: $text-color-primary;
+    &:hover {
+      background-color: $element-color-primary;
+      color: $text-color-white;
+      border: 1px solid $text-color-white;
+    }
+  }
+}

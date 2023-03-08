@@ -1,0 +1,11 @@
+.profile {
+  padding: 3rem 3rem;
+  h2 {
+    @include h2();
+  }
+  p {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: $text-color-grey;
+  }
+}

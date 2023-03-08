@@ -1,0 +1,19 @@
+// MIXINS
+@mixin h2() {
+  color: $text-color-primary;
+  font-family: "Anton", sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+}
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// Variables
+
+$text-color-white: #ffff;
+$text-color-grey: rgb(198, 198, 198);
+$text-color-primary: #48ff00;
+$element-color-primary: #0fc730;
+$text-color-teriary: #faf200;
