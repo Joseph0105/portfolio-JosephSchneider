@@ -138,6 +138,7 @@ body {
   margin-top: 3rem;
 
   .projectCard {
+    // min-width: 380px;
     width: 33%;
     overflow: hidden;
     position: relative;
@@ -165,8 +166,8 @@ body {
       transform: translate(-50%, -50%);
       top: 50%;
       left: 50%;
-      width: 100px;
-      height: 100px;
+      width: 40%;
+      height: 70%;
       border-radius: 50%;
       background-color: $text-color-teriary;
       opacity: 0;
@@ -177,13 +178,36 @@ body {
       display: none;
       p {
         text-align: center;
-        font-size: 15px;
+        font-size: 80%;
         font-weight: 600;
         font-family: "Raleway", sans-serif;
         color: black;
 
         margin: 0;
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .projects-display {
+      justify-content: center;
+    }
+    .projectCard {
+      width: 48%;
+    }
+  }
+  @media (max-width: 490px) {
+    .projects-display {
+      justify-content: center;
+    }
+    .projectCard {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  @media (min-width: 768px) {
+    .projectCard {
+      width: 33%;
     }
   }
 
