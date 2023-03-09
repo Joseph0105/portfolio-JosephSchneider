@@ -87,6 +87,7 @@ const clickOverlay = document.querySelector(".projectCard");
 const overlay = document.querySelector(".overlay");
 const contentOverlay = document.querySelector(".overlay-content");
 
+// Afficher l'overlay
 if (clickOverlay) {
   clickOverlay.addEventListener("click", function (e) {
     e.preventDefault();
@@ -94,6 +95,7 @@ if (clickOverlay) {
   });
 }
 
+// Fermer l'overlay
 const closeOverlay = document.querySelector(".overlay-close");
 
 overlay.addEventListener("click", function (e) {
@@ -110,6 +112,7 @@ closeOverlay.addEventListener("click", function (e) {
   overlay.style.display = "none";
 });
 
+// Hydrater dynamiquement l'overlay
 const overlayProjectName = document.querySelector(".overlay-h1");
 const overlayProjectLink = document.querySelector(".overlay-link");
 const overlayProjectDescription = document.querySelector(
