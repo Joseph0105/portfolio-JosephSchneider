@@ -9,13 +9,15 @@
 })();
 
 function getProjects() {
-  return fetch(`https://api.github.com/users/Joseph0105/repos?per_page=100`, {
-    headers: {
-      Authorization: "Bearer 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",
-    },
-  })
+  return fetch(`https://api.github.com/users/Joseph0105/repos?per_page=100`)
     .then((response) => response.json())
     .then((data) => {
+      for (let i = 0; i < data.length; i++) {
+        if (data[i].id === 610891439) {
+          data.splice(i, 1);
+        }
+      }
+
       const repositories = data;
       const repositoriesDisplay = document.querySelector(".projects-display");
 
@@ -34,7 +36,6 @@ function displayProjects(project) {
 
   const projectLink = document.createElement("a");
   projectLink.classList.add("projectCard-link");
-  // projectLink.href = `https://joseph0105.github.io/${project.name}/`;
 
   const clickHere = document.createElement("div");
   clickHere.classList.add("click-here");
@@ -130,11 +131,7 @@ function displayOverlay(project) {
   overlayProjectImg.src = `https://raw.githubusercontent.com/Joseph0105/${project.name}/main/img/preview.svg`;
 
   // Affichage des langages
-  fetch(`https://api.github.com/repos/Joseph0105/${project.name}/languages`, {
-    headers: {
-      Authorization: "Bearer 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",
-    },
-  })
+  fetch(`https://api.github.com/repos/Joseph0105/${project.name}/languages`)
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
