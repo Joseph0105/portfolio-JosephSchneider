@@ -162,6 +162,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 @keyframes showClickHere {
   0% {
@@ -270,6 +271,12 @@ body {
   font-size: 30px;
   font-weight: 300;
   color: #0fc730;
+}
+.overlay .overlay-content a {
+  text-decoration: none;
+  margin-top: 1rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
 }
 .overlay .overlay-content p {
   color: rgb(173, 173, 173);

@@ -53,6 +53,7 @@ function displayProjects(project) {
   projectCard.addEventListener("click", function (e) {
     e.preventDefault();
     overlay.style.display = "block";
+    displayOverlay(project);
   });
 }
 
@@ -108,3 +109,43 @@ closeOverlay.addEventListener("click", function (e) {
   e.preventDefault();
   overlay.style.display = "none";
 });
+
+const overlayProjectName = document.querySelector(".overlay-h1");
+const overlayProjectLink = document.querySelector(".overlay-link");
+const overlayProjectDescription = document.querySelector(
+  ".overlay-description"
+);
+const overlayProjectH2 = document.querySelector(".overlay-h2");
+const overlayProjectUl = document.querySelector(".overlay-ul");
+const overlayProjectLi = document.querySelector(".overlay-li");
+const overlayProjectItems = document.querySelector(".overlay-items");
+
+function displayOverlay(project) {
+  overlayProjectName.textContent = project.name;
+  overlayProjectLink.href = `https://joseph0105.github.io/${project.name}/`;
+  overlayProjectDescription.textContent = project.description;
+  const overlayProjectLi = document.createElement("li");
+  overlayProjectLi.textContent = project.language;
+  const overlayProjectUl = document.createElement("ul");
+  overlayProjectUl.appendChild(overlayProjectLi);
+  overlayProjectItems.appendChild(overlayProjectUl);
+
+  overlayProjectLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    window.open(overlayProjectLink.href, "_blank");
+  });
+}
+
+if (clickOverlay) {
+  clickOverlay.addEventListener("click", function (e) {
+    e.preventDefault();
+    overlay.style.display = "flex";
+    const projectName = e.target.dataset.name;
+
+    fetch(`https://api.github.com/repos/Joseph0105/${projectName}`)
+      .then((response) => response.json())
+      .then((data) => {
+        displayOverlay(data);
+      });
+  });
+}
