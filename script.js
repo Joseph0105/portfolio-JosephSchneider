@@ -9,7 +9,11 @@
 })();
 
 function getProjects() {
-  return fetch(`https://api.github.com/users/Joseph0105/repos?per_page=100`, {})
+  return fetch(`https://api.github.com/users/Joseph0105/repos?per_page=100`, {
+    headers: {
+      Authorization: "Bearer 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",
+    },
+  })
     .then((response) => response.json())
     .then((data) => {
       const repositories = data;
@@ -123,13 +127,18 @@ function displayOverlay(project) {
   overlayProjectDescription.textContent = project.description;
 
   // Affichage des langages
-  fetch(`https://api.github.com/repos/Joseph0105/${project.name}/languages`)
+  fetch(`https://api.github.com/repos/Joseph0105/${project.name}/languages`, {
+    headers: {
+      Authorization: "Bearer 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",
+    },
+  })
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
+      overlayProjectItems.innerHTML = "";
       for (const key in data) {
         const overlayItemsImg = document.createElement("img");
-        overlayItemsImg.src = `./images/langages/${key}.png`;
+        overlayItemsImg.src = `./images/langages/${key}.svg`;
         overlayProjectItems.appendChild(overlayItemsImg);
       }
     })

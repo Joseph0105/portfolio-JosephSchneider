@@ -287,9 +287,11 @@ body {
 }
 .overlay .overlay-content .overlay-items {
   display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 .overlay .overlay-content .overlay-items img {
-  width: 50px;
+  width: 60px;
 }
 .overlay .overlay-close {
   position: absolute;
