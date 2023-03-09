@@ -11,7 +11,7 @@
 function getProjects() {
   return fetch(`https://api.github.com/users/Joseph0105/repos?per_page=100`, {
     headers: {
-      Authorization: "Bearer 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",
+      Authorization: "Bearer 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",
     },
   })
     .then((response) => response.json())
