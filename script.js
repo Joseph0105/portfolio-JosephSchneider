@@ -11,7 +11,7 @@
 function getProjects() {
   return fetch(`https://api.github.com/users/Joseph0105/repos?per_page=100`, {
     headers: {
-      Authorization: "Bearer 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",
+      Authorization: "Bearer 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",
     },
   })
     .then((response) => response.json())
@@ -114,6 +114,7 @@ closeOverlay.addEventListener("click", function (e) {
 
 // Hydrater dynamiquement l'overlay
 const overlayProjectName = document.querySelector(".overlay-h1");
+const overlayProjectImg = document.querySelector(".overlay-img");
 const overlayProjectLink = document.querySelector(".overlay-link");
 const overlayProjectDescription = document.querySelector(
   ".overlay-description"
@@ -126,10 +127,12 @@ function displayOverlay(project) {
   overlayProjectLink.href = `https://joseph0105.github.io/${project.name}/`;
   overlayProjectDescription.textContent = project.description;
 
+  overlayProjectImg.src = `https://raw.githubusercontent.com/Joseph0105/${project.name}/main/img/preview.svg`;
+
   // Affichage des langages
   fetch(`https://api.github.com/repos/Joseph0105/${project.name}/languages`, {
     headers: {
-      Authorization: "Bearer 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",
+      Authorization: "Bearer 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",
     },
   })
     .then((response) => response.json())
