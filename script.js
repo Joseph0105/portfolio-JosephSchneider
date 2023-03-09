@@ -9,11 +9,7 @@
 })();
 
 function getProjects() {
-  return fetch(`https://api.github.com/users/Joseph0105/repos?per_page=100`, {
-    // headers: {
-    //   Authorization: "Bearer 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",
-    // },
-  })
+  return fetch(`https://api.github.com/users/Joseph0105/repos?per_page=100`, {})
     .then((response) => response.json())
     .then((data) => {
       const repositories = data;
@@ -119,19 +115,27 @@ const overlayProjectDescription = document.querySelector(
   ".overlay-description"
 );
 const overlayProjectH2 = document.querySelector(".overlay-h2");
-const overlayProjectUl = document.querySelector(".overlay-ul");
-const overlayProjectLi = document.querySelector(".overlay-li");
 const overlayProjectItems = document.querySelector(".overlay-items");
 
 function displayOverlay(project) {
   overlayProjectName.textContent = project.name;
   overlayProjectLink.href = `https://joseph0105.github.io/${project.name}/`;
   overlayProjectDescription.textContent = project.description;
-  const overlayProjectLi = document.createElement("li");
-  overlayProjectLi.textContent = project.language;
-  const overlayProjectUl = document.createElement("ul");
-  overlayProjectUl.appendChild(overlayProjectLi);
-  overlayProjectItems.appendChild(overlayProjectUl);
+
+  // Affichage des langages
+  fetch(`https://api.github.com/repos/Joseph0105/${project.name}/languages`)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      for (const key in data) {
+        const overlayItemsImg = document.createElement("p");
+        overlayItemsImg.textContent = `${key}`;
+        overlayProjectItems.appendChild(overlayItemsImg);
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 
   overlayProjectLink.addEventListener("click", function (e) {
     e.preventDefault();
