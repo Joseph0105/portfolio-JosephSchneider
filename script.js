@@ -11,7 +11,7 @@
 function getProjects() {
   return fetch(`https://api.github.com/users/Joseph0105/repos?per_page=100`, {
     headers: {
-      Authorization: "Bearer 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",
+      Authorization: "Bearer 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",
     },
   })
     .then((response) => response.json())
@@ -34,7 +34,7 @@ function displayProjects(project) {
 
   const projectLink = document.createElement("a");
   projectLink.classList.add("projectCard-link");
-  projectLink.href = `https://joseph0105.github.io/${project.name}/`;
+  // projectLink.href = `https://joseph0105.github.io/${project.name}/`;
 
   const clickHere = document.createElement("div");
   clickHere.classList.add("click-here");
@@ -49,6 +49,11 @@ function displayProjects(project) {
   projectCard.appendChild(projectLink);
   projectCard.appendChild(projectLink);
   projectsDisplay.appendChild(projectCard);
+
+  projectCard.addEventListener("click", function (e) {
+    e.preventDefault();
+    overlay.style.display = "block";
+  });
 }
 
 // !!!!!!! CV !!!!!!!
@@ -73,4 +78,33 @@ cvModal.addEventListener("click", function (e) {
   } else {
     cvModal.style.display = "none";
   }
+});
+
+// !!!!!!!!!!! OVERLAY !!!!!!!!!!!!!
+
+const clickOverlay = document.querySelector(".projectCard");
+const overlay = document.querySelector(".overlay");
+const contentOverlay = document.querySelector(".overlay-content");
+
+if (clickOverlay) {
+  clickOverlay.addEventListener("click", function (e) {
+    e.preventDefault();
+    overlay.style.display = "flex";
+  });
+}
+
+const closeOverlay = document.querySelector(".overlay-close");
+
+overlay.addEventListener("click", function (e) {
+  e.preventDefault();
+  if (contentOverlay.contains(e.target)) {
+    return;
+  } else {
+    overlay.style.display = "none";
+  }
+});
+
+closeOverlay.addEventListener("click", function (e) {
+  e.preventDefault();
+  overlay.style.display = "none";
 });
