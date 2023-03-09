@@ -11,7 +11,7 @@
 function getProjects() {
   return fetch(`https://api.github.com/users/Joseph0105/repos?per_page=100`, {
     headers: {
-      Authorization: "Bearer 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",
+      Authorization: "Bearer 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",
     },
   })
     .then((response) => response.json())
@@ -132,7 +132,7 @@ function displayOverlay(project) {
   // Affichage des langages
   fetch(`https://api.github.com/repos/Joseph0105/${project.name}/languages`, {
     headers: {
-      Authorization: "Bearer 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",
+      Authorization: "Bearer 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",
     },
   })
     .then((response) => response.json())
