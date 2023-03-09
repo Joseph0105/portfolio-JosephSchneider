@@ -128,8 +128,8 @@ function displayOverlay(project) {
     .then((data) => {
       console.log(data);
       for (const key in data) {
-        const overlayItemsImg = document.createElement("p");
-        overlayItemsImg.textContent = `${key}`;
+        const overlayItemsImg = document.createElement("img");
+        overlayItemsImg.src = `./images/langages/${key}.png`;
         overlayProjectItems.appendChild(overlayItemsImg);
       }
     })
