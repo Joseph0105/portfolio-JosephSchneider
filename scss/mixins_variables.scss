@@ -11,70 +11,59 @@
   align-items: center;
 }
 
-@mixin linkOverlayButton {
-  .link-items {
+@mixin fillLinkBackground {
+  .bg {
+    left: 0%;
+    position: absolute;
+    background-color: $element-color-primary;
+    width: 0;
+    height: 100%;
+    -webkit-transition: width 0.3s ease-out;
+    -o-transition: width 0.3s ease-out;
+    transition: width 0.3s ease-out;
+    z-index: 3;
+  }
+
+  a:hover .bg {
+    width: 100%;
+  }
+
+  a {
+    position: absolute;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    .link-contain {
-      height: 100%;
-      width: 80%;
-      @include center();
-      overflow: hidden;
+    justify-content: center;
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    width: 30%;
+    height: 30px;
+    border: 1px solid $element-color-primary;
+    background-color: $text-color-white;
+    color: $element-color-primary;
+    transition: 0.3s;
 
-      .bg {
-        left: 0%;
-        position: absolute;
-        background-color: $element-color-primary;
-        width: 0;
-        height: 100%;
-        -webkit-transition: width 0.3s ease-out;
-        -o-transition: width 0.3s ease-out;
-        transition: width 0.3s ease-out;
-        z-index: 3;
+    span,
+    i {
+      z-index: 4;
+    }
+
+    &:hover {
+      border: 1px solid;
+      span,
+      i {
+        color: darken(#555, $amount: 8);
       }
-
-      a:hover .bg {
-        width: 100%;
-      }
-
-      a {
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        font-family: "Raleway", sans-serif;
-        font-weight: 300;
-        width: 30%;
-        height: 30px;
-        border: 1px solid $element-color-primary;
-        background-color: $text-color-white;
-        color: $element-color-primary;
-        transition: 0.3s;
-
-        span,
-        i {
-          z-index: 4;
-        }
-
-        &:hover {
-          border: 1px solid;
-          span,
-          i {
-            color: darken(#555, $amount: 8);
-          }
-        }
-        &:visited {
-          color: #555;
-        }
-        span {
-          margin-right: 0.5rem;
-        }
-      }
+    }
+    &:visited {
+      color: #555;
+    }
+    span {
+      margin-right: 0.5rem;
     }
   }
 }
+
 // Variables
 
 $text-color-white: #ffff;

@@ -85,22 +85,68 @@ body {
   font-family: "Raleway", sans-serif;
   color: rgb(173, 173, 173);
 }
-.section-home a {
+.section-home .link-contain .bg {
+  left: 0%;
+  position: absolute;
+  background-color: #0fc730;
+  width: 0;
+  height: 100%;
+  -webkit-transition: width 0.3s ease-out;
+  -o-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
+  z-index: 3;
+}
+.section-home .link-contain a:hover .bg {
+  width: 100%;
+}
+.section-home .link-contain a {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  width: 30%;
+  height: 30px;
+  border: 1px solid #0fc730;
+  background-color: white;
+  color: #0fc730;
+  transition: 0.3s;
+}
+.section-home .link-contain a span,
+.section-home .link-contain a i {
+  z-index: 4;
+}
+.section-home .link-contain a:hover {
+  border: 1px solid;
+}
+.section-home .link-contain a:hover span,
+.section-home .link-contain a:hover i {
+  color: #414141;
+}
+.section-home .link-contain a:visited {
+  color: #555;
+}
+.section-home .link-contain a span {
+  margin-right: 0.5rem;
+}
+.section-home .link-contain a {
   margin-top: 80px;
   margin-left: 30px;
   border: 1px solid #0af637;
+  background-color: transparent;
   width: 150px;
   height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: #48ff00;
 }
-.section-home a:hover {
-  background-color: #0fc730;
+.section-home .link-contain a:hover {
+  border: 1px solid #0af637;
+}
+.section-home .link-contain a:hover span {
   color: white;
-  border: 1px solid white;
+}
+.section-home .link-contain a span {
+  color: white;
 }
 
 .cv-modal {

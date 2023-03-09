@@ -70,19 +70,25 @@
       color: $text-color-grey;
     }
   }
-  a {
-    margin-top: 80px;
-    margin-left: 30px;
-    border: 1px solid #0af637;
-    width: 150px;
-    height: 50px;
-    @include center();
-    text-decoration: none;
-    color: $text-color-primary;
-    &:hover {
-      background-color: $element-color-primary;
-      color: $text-color-white;
-      border: 1px solid $text-color-white;
+
+  .link-contain {
+    @include fillLinkBackground;
+    a {
+      margin-top: 80px;
+      margin-left: 30px;
+      border: 1px solid #0af637;
+      background-color: transparent;
+      width: 150px;
+      height: 50px;
+      &:hover {
+        border: 1px solid #0af637;
+        span {
+          color: $text-color-white;
+        }
+      }
+      span {
+        color: $text-color-white;
+      }
     }
   }
 }
