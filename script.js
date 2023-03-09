@@ -138,7 +138,7 @@ function displayOverlay(project) {
       overlayProjectItems.innerHTML = "";
       for (const key in data) {
         const overlayItemsImg = document.createElement("img");
-        overlayItemsImg.src = `./images/langages/${key}.svg`;
+        overlayItemsImg.src = `https://raw.githubusercontent.com/Joseph0105/portfolio-JosephSchneider/main/Images/langages/${key}.svg`;
         overlayProjectItems.appendChild(overlayItemsImg);
       }
     })
