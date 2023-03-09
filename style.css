@@ -285,6 +285,12 @@ body {
   font-size: 25px;
   color: #e1d900;
 }
+.overlay .overlay-content .overlay-items {
+  display: flex;
+}
+.overlay .overlay-content .overlay-items img {
+  width: 50px;
+}
 .overlay .overlay-close {
   position: absolute;
   top: 10px;
