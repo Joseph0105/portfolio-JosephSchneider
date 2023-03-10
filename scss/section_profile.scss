@@ -3,9 +3,18 @@
   h2 {
     @include h2();
   }
-  p {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    color: $text-color-grey;
+  .About-me {
+    display: flex;
+    justify-content: space-between;
+    p {
+      width: 65%;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: $text-color-grey;
+    }
+    img {
+      width: 30%;
+      border-radius: 50%;
+    }
   }
 }
