@@ -1,15 +1,24 @@
 // !!!!!! FONCTIONS POUR LE PORTFOLIO !!!!!!!!!!!!!
 
-// (async function () {
-//   const projects = await getProjects();
-//   console.log(projects);
-//   for (project of projects) {
-//     displayProjects(project);
-//   }
-// })();
+window.onload = function () {
+  // Supprimer le loader
+  document.querySelector(".section-loader").style.display = "none";
+};
+
+(async function () {
+  const projects = await getProjects();
+  console.log(projects);
+  for (project of projects) {
+    displayProjects(project);
+  }
+})();
 
 function getProjects() {
-  return fetch(`https://api.github.com/users/Joseph0105/repos?per_page=100`)
+  return fetch(`https://api.github.com/users/Joseph0105/repos?per_page=100`, {
+    headers: {
+      Authorization: "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",
+    },
+  })
     .then((response) => response.json())
     .then((data) => {
       for (let i = 0; i < data.length; i++) {
@@ -87,6 +96,9 @@ cvModal.addEventListener("click", function (e) {
 const clickOverlay = document.querySelector(".projectCard");
 const overlay = document.querySelector(".overlay");
 const contentOverlay = document.querySelector(".overlay-content");
+const overlayLoader = document.querySelector(".overlay-loader");
+
+const overlayImg = document.querySelector(".overlay-img");
 
 // Afficher l'overlay
 if (clickOverlay) {
@@ -104,13 +116,27 @@ overlay.addEventListener("click", function (e) {
   if (contentOverlay.contains(e.target)) {
     return;
   } else {
+    overlayLoader.style.display = "flex";
     overlay.style.display = "none";
+    overlayProjectName.textContent = "";
+    overlayProjectLink.href = "";
+    overlayProjectDescription.textContent = "";
+    overlayProjectImg.src = "";
+    overlayProjectH2.textContent = "";
+    overlayProjectItems.innerHTML = "";
   }
 });
 
 closeOverlay.addEventListener("click", function (e) {
   e.preventDefault();
-  overlay.style.display = "none";
+  overlayLoader.style.display = "flex";
+  overlayProjectName.textContent = "";
+  overlayProjectLink.href = "";
+  overlayProjectDescription.textContent = "";
+
+  overlayProjectImg.src = "";
+  overlayProjectH2.textContent = "";
+  overlayProjectItems.innerHTML = "";
 });
 
 // Hydrater dynamiquement l'overlay
@@ -139,7 +165,13 @@ function displayOverlay(project) {
       for (const key in data) {
         const overlayItemsImg = document.createElement("img");
         overlayItemsImg.src = `https://raw.githubusercontent.com/Joseph0105/portfolio-JosephSchneider/main/Images/langages/${key}.svg`;
+        overlayProjectImg.onload = function () {
+          overlayLoader.style.display = "none";
+        };
         overlayProjectItems.appendChild(overlayItemsImg);
+        contentOverlay.addEventListener("load", function () {
+          overlayLoader.style.display = "none";
+        });
       }
     })
     .catch((error) => {

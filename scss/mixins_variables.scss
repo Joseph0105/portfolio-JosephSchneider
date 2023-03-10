@@ -1,4 +1,144 @@
+// Variables
+
+$text-color-white: #ffff;
+$text-color-grey: rgb(173, 173, 173);
+$text-color-primary: #48ff00;
+$element-color-primary: #0fc730;
+$text-color-tertiary: #faf200;
+$overlay-background-color: #2b2b2b;
+$error-msg: #ff0000;
+
 // MIXINS
+
+@mixin loader {
+  .section-loader {
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    z-index: 5;
+    animation: loaderscreen infinite;
+    animation-delay: 200s;
+    animation-fill-mode: forwards;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    color: $text-color-grey;
+    font-family: "Raleway", sans-serif;
+  }
+  .load-text {
+    margin-left: 25px;
+  }
+  .loader {
+    width: 50px;
+    height: 50px;
+    position: relative;
+  }
+
+  .loader_circles {
+    border-radius: 50px;
+    border: 3px solid transparent;
+    border-top-color: $text-color-primary;
+    animation: spin 1s linear infinite;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      bottom: 5px;
+      right: 5px;
+      border-radius: 50px;
+      border: 3px solid transparent;
+      border-top-color: $text-color-tertiary;
+      opacity: 0.8;
+      animation: spin 5s linear infinite;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      bottom: 12px;
+      right: 12px;
+      border-radius: 50px;
+      border: 3px solid transparent;
+      border-top-color: $element-color-primary;
+      opacity: 0.6;
+      animation: spin 10s linear infinite;
+    }
+  }
+
+  @keyframes loaderscreen {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: scale(0);
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spinreverse {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+}
+
+@mixin jump {
+  @keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    10% {
+      transform: translateY(10);
+    }
+    20% {
+      transform: translateY(0px);
+    }
+    30% {
+      transform: translateY(-10px);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(0px);
+    }
+    70% {
+      transform: translateY(10px);
+    }
+    80% {
+      transform: translateY(0px);
+    }
+    90% {
+      transform: translateY(-3px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
 @mixin h2() {
   color: $text-color-primary;
   font-family: "Anton", sans-serif;
@@ -63,13 +203,3 @@
     }
   }
 }
-
-// Variables
-
-$text-color-white: #ffff;
-$text-color-grey: rgb(173, 173, 173);
-$text-color-primary: #48ff00;
-$element-color-primary: #0fc730;
-$text-color-tertiary: #faf200;
-$overlay-background-color: #2b2b2b;
-$error-msg: #ff0000;

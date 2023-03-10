@@ -1,4 +1,12 @@
 @import "./mixins_variables.scss";
+@include loader;
+.section-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
 .overlay {
   position: fixed;
   top: 0;
@@ -12,6 +20,7 @@
   width: 100%;
 
   .overlay-content {
+    overflow: hidden;
     background-color: $overlay-background-color;
     padding: 1rem;
     top: 5%;

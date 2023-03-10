@@ -7,12 +7,20 @@
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
-    p {
+    .text-container {
+      padding: 1rem;
       width: 65%;
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      color: $text-color-grey;
+      background-color: $overlay-background-color;
+      border-radius: 5px;
+
+      p {
+        text-align: justify;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        color: lighten($text-color-grey, $amount: 10);
+      }
     }
+
     img {
       width: 30%;
       border-radius: 50%;
@@ -21,42 +29,7 @@
       &:hover {
         animation: jump 0.7s cubic-bezier(0.42, -0.42, 0.63, 1);
       }
-    }
-    @keyframes jump {
-      0% {
-        transform: translateY(0);
-      }
-      10% {
-        transform: translateY(10);
-      }
-      20% {
-        transform: translateY(0px);
-      }
-      30% {
-        transform: translateY(-10px);
-      }
-      40% {
-        transform: translateY(-20px);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
-      60% {
-        transform: translateY(0px);
-      }
-      70% {
-        transform: translateY(10px);
-      }
-      80% {
-        transform: translateY(0px);
-      }
-      90% {
-        transform: translateY(-3px);
-      }
-
-      100% {
-        transform: translateY(0);
-      }
+      @include jump;
     }
   }
 }
