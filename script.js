@@ -224,3 +224,12 @@ function validatetext() {
 
 const contactForm = document.querySelector(".contact-form");
 contactForm.addEventListener("submit", ValidateEmail);
+// Ouverture du formulaire
+
+const mailIcon = document.querySelector(".fa-envelope");
+function showForm(event) {
+  const formContact = document.querySelector(".form-contact");
+  formContact.style.display = "flex";
+}
+
+mailIcon.addEventListener("click", showForm);

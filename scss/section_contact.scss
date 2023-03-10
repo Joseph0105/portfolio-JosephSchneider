@@ -1,9 +1,36 @@
+.contact-section {
+  padding: 3rem 3rem;
+  h2 {
+    @include h2;
+  }
+}
+.block-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .contact-container {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  i {
+    font-size: 50px;
+    color: $text-color-grey;
+    transition: transform 0.2s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+      color: $element-color-primary;
+      cursor: pointer;
+    }
+  }
+}
+
+.form-contact {
   position: fixed;
   top: 0;
   left: 0rem;
   background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   z-index: 999;
@@ -68,7 +95,7 @@
       }
     }
     .email-message {
-      height: 250px;
+      height: 220px;
 
       textarea {
         width: 100%;
@@ -84,7 +111,7 @@
     }
     button {
       position: absolute;
-      bottom: 15px;
+      bottom: 10px;
       right: 15px;
       display: flex;
       align-items: center;
@@ -124,3 +151,5 @@
     }
   }
 }
+
+@import "./mixins_variables.scss";

@@ -118,49 +118,68 @@
       </p>
     </section>
 
-    <section class="contact">
+    <section class="contact-section">
       <h2>Contact</h2>
-      <div class="contact-container">
-        <form
-          id="contact-form"
-          class="contact-form"
-          action="https://formspree.io/f/xgebzopo"
-          method="POST"
-        >
-          <h2>Ecrivez moi :</h2>
-          <div class="email-address">
-            <input
-              id="email-input"
-              class="email-input"
-              name="email"
-              placeholder="Email"
-            />
-            <p class="email-error"></p>
-          </div>
-          <div class="email-subject">
-            <input
-              id="subject-input"
-              class="subject-input"
-              type="text"
-              name="_subject"
-              placeholder="Sujet"
-            />
-            <p class="subject-error"></p>
-          </div>
-          <div class="email-message">
-            <textarea
-              id="message-input"
-              class="message-input"
-              name="message"
-              placeholder="Votre message"
-            ></textarea>
-            <p class="message-error"></p>
-          </div>
+      <div class="block-contact">
+        <div class="contact-container">
+          <div class="form-contact-container">
+            <i class="fa-solid fa-envelope"></i>
+            <div class="form-contact">
+              <form
+                id="contact-form"
+                class="contact-form"
+                action="https://formspree.io/f/xgebzopo"
+                method="POST"
+              >
+                <h2>Ecrivez moi :</h2>
+                <div class="email-address">
+                  <input
+                    id="email-input"
+                    class="email-input"
+                    name="email"
+                    placeholder="Email"
+                  />
+                  <p class="email-error"></p>
+                </div>
+                <div class="email-subject">
+                  <input
+                    id="subject-input"
+                    class="subject-input"
+                    type="text"
+                    name="_subject"
+                    placeholder="Sujet"
+                  />
+                  <p class="subject-error"></p>
+                </div>
+                <div class="email-message">
+                  <textarea
+                    id="message-input"
+                    class="message-input"
+                    name="message"
+                    placeholder="Votre message"
+                  ></textarea>
+                  <p class="message-error"></p>
+                </div>
 
-          <button class="email-submit" type="submit">
-            <span class="background"></span>Envoyer
-          </button>
-        </form>
+                <button class="email-submit" type="submit">
+                  <span class="background"></span>Envoyer
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="linkedin-contact">
+            <a
+              href="https://www.linkedin.com/in/joseph-schneider-0105/"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </div>
+          <div class="github-contact">
+            <a href="https://github.com/Joseph0105" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </div>
+        </div>
       </div>
     </section>
 
