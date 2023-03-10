@@ -297,7 +297,7 @@ body {
   width: 100%;
 }
 .overlay .overlay-content {
-  background-color: #efefef;
+  background-color: #2b2b2b;
   padding: 1rem;
   top: 5%;
   left: 15%;
@@ -420,6 +420,131 @@ body {
   margin-top: 2rem;
   margin-bottom: 1rem;
   color: rgb(173, 173, 173);
+}
+
+.contact-container {
+  position: fixed;
+  top: 0;
+  left: 0rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  height: 100%;
+  width: 100%;
+}
+.contact-container h2 {
+  color: #48ff00;
+  font-family: "Anton", sans-serif;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-weight: 300;
+}
+.contact-container form {
+  background-color: #2b2b2b;
+  padding: 1rem;
+  top: 5%;
+  left: 15%;
+  bottom: 5%;
+  position: absolute;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+.contact-container form input,
+.contact-container form textarea {
+  background-color: #333333;
+  border: none;
+  height: 100%;
+  padding: 1rem;
+  font-size: 15px;
+  resize: none;
+  font-family: "Raleway", sans-serif;
+  color: #848484;
+  appearance: none;
+  background-image: none;
+}
+.contact-container form input:focus,
+.contact-container form textarea:focus {
+  color: #9e9e9e;
+  border: 1px solid #0fc730;
+  outline: none;
+}
+.contact-container form inputinput:-internal-autofill-selected,
+.contact-container form textareainput:-internal-autofill-selected {
+  background-color: #333333;
+}
+.contact-container form .validation-error {
+  border: 1px solid #ff0000;
+}
+.contact-container form .email-address {
+  margin-bottom: 25px;
+  height: 50px;
+}
+.contact-container form .email-address input {
+  width: 25%;
+}
+.contact-container form .email-subject {
+  margin-bottom: 25px;
+  height: 50px;
+}
+.contact-container form .email-subject input {
+  width: 100%;
+}
+.contact-container form .email-message {
+  height: 250px;
+}
+.contact-container form .email-message textarea {
+  width: 100%;
+}
+.contact-container form .email-error,
+.contact-container form .subject-error,
+.contact-container form .message-error {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #ff0000;
+  font-size: 13px;
+}
+.contact-container form button {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  width: 30%;
+  height: 30px;
+  border: 1px solid #0fc730;
+  background-color: white;
+  color: #0fc730;
+  transition: 0.3s;
+}
+.contact-container form button .background {
+  left: 0%;
+  position: absolute;
+  background-color: #0fc730;
+  width: 0;
+  height: 100%;
+  -webkit-transition: width 0.3s ease-out;
+  -o-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
+  z-index: 3;
+}
+.contact-container form button:hover .background {
+  width: 100%;
+}
+.contact-container form button span {
+  z-index: 4;
+}
+.contact-container form button:hover {
+  border: 1px solid;
+}
+.contact-container form button:hover span {
+  color: #414141;
 }
 
 /*# sourceMappingURL=style.css.map */

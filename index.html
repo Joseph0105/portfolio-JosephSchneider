@@ -118,7 +118,7 @@
       </p>
     </section>
 
-    <dection class="contact">
+    <section class="contact">
       <h2>Contact</h2>
       <div class="contact-container">
         <form
@@ -127,39 +127,42 @@
           action="https://formspree.io/f/xgebzopo"
           method="POST"
         >
+          <h2>Ecrivez moi :</h2>
           <div class="email-address">
-            <label for="email-input" class="email-input-label"
-              >Votre adresse mail:</label
-            >
-            <input id="email-input" class="email-input" name="email" />
+            <input
+              id="email-input"
+              class="email-input"
+              name="email"
+              placeholder="Email"
+            />
             <p class="email-error"></p>
           </div>
           <div class="email-subject">
-            <label for="subject-input" class="subject-input-label"
-              >Sujet:</label
-            >
             <input
               id="subject-input"
               class="subject-input"
               type="text"
               name="_subject"
+              placeholder="Sujet"
             />
+            <p class="subject-error"></p>
           </div>
           <div class="email-message">
-            <label for="message-input" class="message-input-label"
-              >Votre message:</label
-            >
             <textarea
               id="message-input"
               class="message-input"
               name="message"
+              placeholder="Votre message"
             ></textarea>
+            <p class="message-error"></p>
           </div>
 
-          <button class="email-submit" type="submit">Envoyer</button>
+          <button class="email-submit" type="submit">
+            <span class="background"></span>Envoyer
+          </button>
         </form>
       </div>
-    </dection>
+    </section>
 
     <script src="./script.js"></script>
   </body>

@@ -168,23 +168,59 @@ if (clickOverlay) {
 
 // !!!!!!!!!!!!!!!! FORMULAIRE DE CONTACT !!!!!!!!!!!!!!!!!!!!!
 
-const contactForm = document.querySelector(".contact-form");
-const emailInput = document.querySelector(".email-input");
-const emailError = document.querySelector(".email-error");
+// Valider email
+function ValidateEmail(event) {
+  event.preventDefault();
+  const emailInput = document.querySelector(".email-input");
+  const emailError = document.querySelector(".email-error");
 
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-const emailSubmit = document.querySelector(".email-submit");
-
-contactForm.addEventListener("submit", function (e) {
-  e.preventDefault();
   const email = emailInput.value;
-  if (emailInput.value === "") {
-    emailError.textContent = "Veuillez ajouter votre addresse mail";
+  if (email === "") {
+    emailError.textContent = "Veuillez ajouter votre adresse mail";
+    emailInput.classList.add("validation-error");
   } else if (!emailRegex.test(email)) {
-    e.preventDefault();
     emailError.textContent = "Votre adresse mail n'est pas valide";
+    emailInput.classList.add("validation-error");
   } else {
     emailError.textContent = "";
+    emailInput.classList.remove("validation-error");
+    const isValid = validatetext();
+    if (isValid) {
+      event.target.submit();
+    }
   }
-});
+}
+
+// Valider sujet et message
+function validatetext() {
+  const subjectInput = document.querySelector(".subject-input");
+  const messageinput = document.querySelector(".message-input");
+  const subjectError = document.querySelector(".subject-error");
+  const messageError = document.querySelector(".message-error");
+
+  let isValid = true;
+
+  if (subjectInput.value === "") {
+    subjectError.textContent = "Veuillez ajouter un sujet au message";
+    messageinput.classList.add("validation-error");
+    isValid = false;
+  } else {
+    messageinput.classList.remove("validation-error");
+    subjectError.textContent = "";
+  }
+
+  if (messageinput.value === "") {
+    messageinput.classList.add("validation-error");
+    messageError.textContent = "Veuillez ajouter du texte à votre message";
+    isValid = false;
+  } else {
+    messageinput.classList.remove("validation-error");
+    messageError.textContent = "";
+  }
+  return isValid;
+}
+
+const contactForm = document.querySelector(".contact-form");
+contactForm.addEventListener("submit", ValidateEmail);

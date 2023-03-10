@@ -1,0 +1,126 @@
+.contact-container {
+  position: fixed;
+  top: 0;
+  left: 0rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  height: 100%;
+  width: 100%;
+  h2 {
+    color: $text-color-primary;
+    font-family: "Anton", sans-serif;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: 300;
+  }
+  form {
+    background-color: $overlay-background-color;
+    padding: 1rem;
+    top: 5%;
+    left: 15%;
+    bottom: 5%;
+    position: absolute;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+
+    input,
+    textarea {
+      background-color: lighten($overlay-background-color, $amount: 3);
+      border: none;
+      height: 100%;
+      padding: 1rem;
+      font-size: 15px;
+      resize: none;
+      font-family: "Raleway", sans-serif;
+      color: lighten($overlay-background-color, $amount: 35);
+      appearance: none;
+      background-image: none;
+      &:focus {
+        color: lighten($overlay-background-color, $amount: 45);
+        border: 1px solid $element-color-primary;
+        outline: none;
+      }
+      &input:-internal-autofill-selected {
+        background-color: lighten($overlay-background-color, $amount: 3);
+      }
+    }
+    .validation-error {
+      border: 1px solid $error-msg;
+    }
+    .email-address {
+      margin-bottom: 25px;
+      height: 50px;
+
+      input {
+        width: 25%;
+      }
+    }
+    .email-subject {
+      margin-bottom: 25px;
+      height: 50px;
+
+      input {
+        width: 100%;
+      }
+    }
+    .email-message {
+      height: 250px;
+
+      textarea {
+        width: 100%;
+      }
+    }
+    .email-error,
+    .subject-error,
+    .message-error {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      color: $error-msg;
+      font-size: 13px;
+    }
+    button {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-family: "Raleway", sans-serif;
+      font-weight: 300;
+      width: 30%;
+      height: 30px;
+      border: 1px solid $element-color-primary;
+      background-color: $text-color-white;
+      color: $element-color-primary;
+      transition: 0.3s;
+      .background {
+        left: 0%;
+        position: absolute;
+        background-color: $element-color-primary;
+        width: 0;
+        height: 100%;
+        -webkit-transition: width 0.3s ease-out;
+        -o-transition: width 0.3s ease-out;
+        transition: width 0.3s ease-out;
+        z-index: 3;
+      }
+      &:hover .background {
+        width: 100%;
+      }
+      span {
+        z-index: 4;
+      }
+      &:hover {
+        border: 1px solid;
+        span {
+          color: darken(#555, $amount: 8);
+        }
+      }
+    }
+  }
+}
