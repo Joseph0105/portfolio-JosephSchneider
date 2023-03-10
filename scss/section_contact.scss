@@ -24,13 +24,15 @@
     }
   }
 }
-
+.form-contact-container {
+  display: none;
+}
 .form-contact {
   position: fixed;
   top: 0;
   left: 0rem;
   background-color: rgba(0, 0, 0, 0.8);
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   z-index: 999;

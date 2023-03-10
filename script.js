@@ -226,10 +226,22 @@ const contactForm = document.querySelector(".contact-form");
 contactForm.addEventListener("submit", ValidateEmail);
 // Ouverture du formulaire
 
-const mailIcon = document.querySelector(".fa-envelope");
-function showForm(event) {
-  const formContact = document.querySelector(".form-contact");
-  formContact.style.display = "flex";
-}
+const clickForm = document.querySelector(".fa-envelope");
+const contactFormDisplay = document.querySelector(".form-contact-container");
 
-mailIcon.addEventListener("click", showForm);
+clickForm.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  contactFormDisplay.style.display = "block";
+});
+// Fermer le form
+
+const contactFormContainer = document.querySelector(".contact-form");
+
+contactFormDisplay.addEventListener("click", function (e) {
+  if (e.target === contactFormContainer) {
+    return;
+  } else {
+    contactFormDisplay.style.display = "none";
+  }
+});
