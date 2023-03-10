@@ -1,12 +1,12 @@
 // !!!!!! FONCTIONS POUR LE PORTFOLIO !!!!!!!!!!!!!
 
-// (async function () {
-//   const projects = await getProjects();
-//   console.log(projects);
-//   for (project of projects) {
-//     displayProjects(project);
-//   }
-// })();
+(async function () {
+  const projects = await getProjects();
+  console.log(projects);
+  for (project of projects) {
+    displayProjects(project);
+  }
+})();
 
 function getProjects() {
   return fetch(`https://api.github.com/users/Joseph0105/repos?per_page=100`)
@@ -239,7 +239,10 @@ clickForm.addEventListener("click", function (e) {
 const contactFormContainer = document.querySelector(".contact-form");
 
 contactFormDisplay.addEventListener("click", function (e) {
-  if (e.target === contactFormContainer) {
+  if (
+    e.target === contactFormContainer ||
+    contactFormContainer.contains(e.target)
+  ) {
     return;
   } else {
     contactFormDisplay.style.display = "none";
