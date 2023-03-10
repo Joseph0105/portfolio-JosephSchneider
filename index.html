@@ -118,6 +118,49 @@
       </p>
     </section>
 
+    <dection class="contact">
+      <h2>Contact</h2>
+      <div class="contact-container">
+        <form
+          id="contact-form"
+          class="contact-form"
+          action="https://formspree.io/f/xgebzopo"
+          method="POST"
+        >
+          <div class="email-address">
+            <label for="email-input" class="email-input-label"
+              >Votre adresse mail:</label
+            >
+            <input id="email-input" class="email-input" name="email" />
+            <p class="email-error"></p>
+          </div>
+          <div class="email-subject">
+            <label for="subject-input" class="subject-input-label"
+              >Sujet:</label
+            >
+            <input
+              id="subject-input"
+              class="subject-input"
+              type="text"
+              name="_subject"
+            />
+          </div>
+          <div class="email-message">
+            <label for="message-input" class="message-input-label"
+              >Votre message:</label
+            >
+            <textarea
+              id="message-input"
+              class="message-input"
+              name="message"
+            ></textarea>
+          </div>
+
+          <button class="email-submit" type="submit">Envoyer</button>
+        </form>
+      </div>
+    </dection>
+
     <script src="./script.js"></script>
   </body>
 </html>
