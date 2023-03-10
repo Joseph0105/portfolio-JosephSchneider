@@ -124,9 +124,10 @@
       width: 30%;
       height: 30px;
       border: 1px solid $element-color-primary;
-      background-color: $text-color-white;
-      color: $element-color-primary;
+      background-color: transparent;
+      color: $text-color-white;
       transition: 0.3s;
+      cursor: pointer;
       .background {
         left: 0%;
         position: absolute;
@@ -141,7 +142,7 @@
       &:hover .background {
         width: 100%;
       }
-      span {
+      .send {
         z-index: 4;
       }
       &:hover {

@@ -555,9 +555,10 @@ body {
   width: 30%;
   height: 30px;
   border: 1px solid #0fc730;
-  background-color: white;
-  color: #0fc730;
+  background-color: transparent;
+  color: white;
   transition: 0.3s;
+  cursor: pointer;
 }
 .form-contact form button .background {
   left: 0%;
@@ -573,7 +574,7 @@ body {
 .form-contact form button:hover .background {
   width: 100%;
 }
-.form-contact form button span {
+.form-contact form button .send {
   z-index: 4;
 }
 .form-contact form button:hover {
