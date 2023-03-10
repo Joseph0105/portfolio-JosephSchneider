@@ -1,12 +1,12 @@
 // !!!!!! FONCTIONS POUR LE PORTFOLIO !!!!!!!!!!!!!
 
-(async function () {
-  const projects = await getProjects();
-  console.log(projects);
-  for (project of projects) {
-    displayProjects(project);
-  }
-})();
+// (async function () {
+//   const projects = await getProjects();
+//   console.log(projects);
+//   for (project of projects) {
+//     displayProjects(project);
+//   }
+// })();
 
 function getProjects() {
   return fetch(`https://api.github.com/users/Joseph0105/repos?per_page=100`)
