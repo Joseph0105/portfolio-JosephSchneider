@@ -14,11 +14,7 @@ window.onload = function () {
 })();
 
 function getProjects() {
-  return fetch(`https://api.github.com/users/Joseph0105/repos?per_page=100`, {
-    headers: {
-      Authorization: "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",
-    },
-  })
+  return fetch(`https://api.github.com/users/Joseph0105/repos?per_page=100`)
     .then((response) => response.json())
     .then((data) => {
       for (let i = 0; i < data.length; i++) {
