@@ -1,12 +1,12 @@
 // !!!!!! FONCTIONS POUR LE PORTFOLIO !!!!!!!!!!!!!
 
-// (async function () {
-//   const projects = await getProjects();
-//   console.log(projects);
-//   for (project of projects) {
-//     displayProjects(project);
-//   }
-// })();
+(async function () {
+  const projects = await getProjects();
+  console.log(projects);
+  for (project of projects) {
+    displayProjects(project);
+  }
+})();
 
 function getProjects() {
   return fetch(`https://api.github.com/users/Joseph0105/repos?per_page=100`)
@@ -204,10 +204,10 @@ function validatetext() {
 
   if (subjectInput.value === "") {
     subjectError.textContent = "Veuillez ajouter un sujet au message";
-    messageinput.classList.add("validation-error");
+    subjectInput.classList.add("validation-error");
     isValid = false;
   } else {
-    messageinput.classList.remove("validation-error");
+    subjectInput.classList.remove("validation-error");
     subjectError.textContent = "";
   }
 
@@ -246,5 +246,26 @@ contactFormDisplay.addEventListener("click", function (e) {
     return;
   } else {
     contactFormDisplay.style.display = "none";
+    resetForm();
   }
 });
+
+function resetForm() {
+  const emailInput = document.querySelector("#email-input");
+  const subjectInput = document.querySelector("#subject-input");
+  const messageInput = document.querySelector("#message-input");
+  const subjectError = document.querySelector(".subject-error");
+  const emailError = document.querySelector(".email-error");
+  const messageError = document.querySelector(".message-error");
+
+  emailInput.value = "";
+  subjectInput.value = "";
+  messageInput.value = "";
+
+  emailInput.classList.remove("validation-error");
+  subjectInput.classList.remove("validation-error");
+  messageInput.classList.remove("validation-error");
+  emailError.textContent = "";
+  subjectError.textContent = "";
+  messageError.textContent = "";
+}
