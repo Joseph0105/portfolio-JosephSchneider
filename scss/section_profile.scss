@@ -4,6 +4,7 @@
     @include h2();
   }
   .About-me {
+    margin-top: 50px;
     display: flex;
     justify-content: space-between;
     p {
@@ -15,6 +16,47 @@
     img {
       width: 30%;
       border-radius: 50%;
+      border: solid 2px $text-color-white;
+      transition: transform 0.1s cubic-bezier(0.42, -0.42, 0.63, 1);
+      &:hover {
+        animation: jump 0.7s cubic-bezier(0.42, -0.42, 0.63, 1);
+      }
+    }
+    @keyframes jump {
+      0% {
+        transform: translateY(0);
+      }
+      10% {
+        transform: translateY(10);
+      }
+      20% {
+        transform: translateY(0px);
+      }
+      30% {
+        transform: translateY(-10px);
+      }
+      40% {
+        transform: translateY(-20px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      60% {
+        transform: translateY(0px);
+      }
+      70% {
+        transform: translateY(10px);
+      }
+      80% {
+        transform: translateY(0px);
+      }
+      90% {
+        transform: translateY(-3px);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
     }
   }
 }
