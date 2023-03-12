@@ -11,6 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@100&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://kit.fontawesome.com/287a4653ff.css"
+      crossorigin="anonymous"
+    />
 
     <script
       src="https://kit.fontawesome.com/287a4653ff.js"
@@ -24,7 +29,37 @@
       <span class="load-text">Chargement...</span>
     </section>
     <section class="section-home">
-      <div class="bar-icon"><i class="fa-solid fa-bars"></i></div>
+      <div class="bar-icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="menu">
+        <div class="icone-border"><i class="fa-solid fa-arrow-up"></i></div>
+
+        <div class="go-to-portfolio">
+          <a href="#portfolio">- Mon portfolio</a>
+        </div>
+        <div class="go-to-profile">
+          <a href="#profile">- Mon profil</a>
+        </div>
+        <div class="go-to-contact">
+          <div class="message-contact">
+            <i class="fa-solid fa-comments"></i>
+          </div>
+
+          <div class="linkedin-contact">
+            <a
+              href="https://www.linkedin.com/in/joseph-schneider-0105/"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </div>
+          <div class="github-contact">
+            <a href="https://github.com/Joseph0105" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </div>
+        </div>
+      </div>
 
       <div class="scroll-down right">
         <p>scroll down</p>
@@ -58,7 +93,7 @@
       </div>
     </section>
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <h2>Mon portfolio</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos incidunt
@@ -123,7 +158,7 @@
       </div>
     </section>
 
-    <section class="profile">
+    <section class="profile" id="profile">
       <h2>À propos de moi</h2>
       <div class="About-me">
         <img
@@ -150,7 +185,7 @@
       </div>
     </section>
 
-    <section class="contact-section">
+    <section class="contact-section" id="contact">
       <div class="block-contact">
         <div class="contact-container">
           <i class="fa-solid fa-envelope"></i>
@@ -216,6 +251,10 @@
     </section>
 
     <script src="./script.js"></script>
+    <script src="/scripts/cv.js"></script>
+    <script src="/scripts/menu.js"></script>
+    <script src="/scripts/overlay.js"></script>
+    <script src="/scripts/formulaire_contact.js"></script>
     <script src="./scripts/scroll.js"></script>
   </body>
 </html>
