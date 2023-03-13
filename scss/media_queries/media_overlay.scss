@@ -1,0 +1,32 @@
+@media screen and (max-width: 440px) {
+  .overlay {
+    .overlay-content {
+      left: 0;
+      width: 100%;
+      padding: 0;
+      h1 {
+        font-size: 30px;
+        padding: 1rem;
+      }
+    }
+    .link-items {
+      flex-direction: column;
+      justify-content: center;
+      .link-contain {
+        height: 100px !important;
+        justify-content: center;
+      }
+      h2 {
+        padding: 1rem;
+      }
+      .overlay-items {
+        img {
+          width: 40px;
+        }
+      }
+      a {
+        width: 200px !important;
+      }
+    }
+  }
+}

@@ -751,10 +751,10 @@ body {
 }
 .overlay .overlay-content .link-items .link-contain {
   height: 100%;
-  width: 80%;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-left: 40px;
+  align-items: flex-end;
   overflow: hidden;
 }
 .overlay .overlay-content .link-items .link-contain .bg {
@@ -816,7 +816,10 @@ body {
   color: #3acc00;
 }
 .overlay .overlay-content p {
-  color: #555;
+  background-color: #383838;
+  border-radius: 3px;
+  padding: 1rem;
+  color: #bababa;
 }
 .overlay .overlay-content .overlay-items {
   display: flex;
@@ -828,15 +831,43 @@ body {
 }
 .overlay .overlay-close {
   position: absolute;
-  top: 10px;
+  top: 30px;
   right: 10px;
-  background-color: rgb(241, 5, 5);
+  background-color: transparent;
   border: none;
-  color: white;
+  color: rgb(173, 173, 173);
   cursor: pointer;
   font-size: 20px;
 }
 
+@media screen and (max-width: 440px) {
+  .overlay .overlay-content {
+    left: 0;
+    width: 100%;
+    padding: 0;
+  }
+  .overlay .overlay-content h1 {
+    font-size: 30px;
+    padding: 1rem;
+  }
+  .overlay .link-items {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .overlay .link-items .link-contain {
+    height: 100px !important;
+    justify-content: center;
+  }
+  .overlay .link-items h2 {
+    padding: 1rem;
+  }
+  .overlay .link-items .overlay-items img {
+    width: 40px;
+  }
+  .overlay .link-items a {
+    width: 200px !important;
+  }
+}
 @media (max-width: 768px) {
   .projects-display {
     justify-content: center;

@@ -35,7 +35,7 @@
     .overlay-img {
       width: 100%;
       object-fit: cover;
-      // box-shadow: 3px 3px 10px #c8c8c8;
+
       margin-bottom: 1rem;
     }
     .link-items {
@@ -44,8 +44,10 @@
       align-items: center;
       .link-contain {
         height: 100%;
-        width: 80%;
-        @include center();
+        width: 100%;
+        display: flex;
+        margin-left: 40px;
+        align-items: flex-end;
         overflow: hidden;
         @include fillLinkBackground();
       }
@@ -65,7 +67,10 @@
     }
 
     p {
-      color: #555;
+      background-color: lighten($overlay-background-color, $amount: 5);
+      border-radius: 3px;
+      padding: 1rem;
+      color: lighten($text-color-grey, $amount: 5);
     }
 
     .overlay-items {
@@ -80,12 +85,13 @@
 
   .overlay-close {
     position: absolute;
-    top: 10px;
+    top: 30px;
     right: 10px;
-    background-color: rgba(241, 5, 5);
+    background-color: transparent;
     border: none;
-    color: white;
+    color: $text-color-grey;
     cursor: pointer;
     font-size: 20px;
   }
 }
+@import "./media_queries/media_overlay.scss";
