@@ -27,7 +27,6 @@ overlay.addEventListener("click", function (e) {
     overlayProjectLink.href = "";
     overlayProjectDescription.textContent = "";
     overlayProjectImg.src = "";
-    overlayProjectH2.textContent = "";
     overlayProjectItems.innerHTML = "";
   }
 });
@@ -40,7 +39,6 @@ closeOverlay.addEventListener("click", function (e) {
   overlayProjectDescription.textContent = "";
 
   overlayProjectImg.src = "";
-  overlayProjectH2.textContent = "";
   overlayProjectItems.innerHTML = "";
 });
 

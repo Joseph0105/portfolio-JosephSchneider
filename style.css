@@ -755,6 +755,7 @@ body {
   display: flex;
   margin-left: 40px;
   align-items: flex-end;
+  justify-content: end;
   overflow: hidden;
 }
 .overlay .overlay-content .link-items .link-contain .bg {

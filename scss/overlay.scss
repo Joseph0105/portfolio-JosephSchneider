@@ -48,6 +48,7 @@
         display: flex;
         margin-left: 40px;
         align-items: flex-end;
+        justify-content: end;
         overflow: hidden;
         @include fillLinkBackground();
       }
