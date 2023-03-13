@@ -856,12 +856,14 @@ body {
     padding: 1rem;
   }
   .overlay .link-items {
+    margin-top: 10px;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center !important;
   }
   .overlay .link-items .link-contain {
     height: 100px !important;
-    justify-content: center;
+    justify-content: center !important;
+    align-items: center !important;
   }
   .overlay .link-items h2 {
     padding: 1rem;
