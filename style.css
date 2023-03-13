@@ -864,6 +864,32 @@ body {
     width: 33%;
   }
 }
+@media (max-width: 768px) {
+  .projects-display {
+    justify-content: center;
+  }
+  .projectCard {
+    width: 48%;
+  }
+  .click-here {
+    width: 30%;
+    height: 50%;
+  }
+}
+@media (max-width: 490px) {
+  .projects-display {
+    justify-content: center;
+  }
+  .projectCard {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 768px) {
+  .projectCard {
+    width: 33%;
+  }
+}
 .profile {
   padding: 3rem 3rem;
 }
@@ -935,6 +961,31 @@ body {
   }
 }
 
+@media screen and (max-width: 440px) {
+  .profile {
+    padding: 0;
+    position: relative;
+  }
+  .profile h2 {
+    height: 100px;
+    padding: 1rem;
+  }
+  .profile .About-me {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile .About-me .text-container {
+    width: 100%;
+  }
+  .profile .About-me .text-container p {
+    margin-top: 5rem;
+  }
+  .profile .About-me img {
+    position: absolute;
+    top: 90px;
+    width: 35%;
+  }
+}
 .contact-section {
   padding: 3rem 3rem;
 }
