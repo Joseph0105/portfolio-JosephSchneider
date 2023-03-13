@@ -804,7 +804,7 @@ body {
 .overlay .overlay-content .link-items .link-contain a span {
   margin-right: 0.5rem;
 }
-.overlay .overlay-content h1 {
+.overlay .overlay-content .overlay-h1 {
   margin-bottom: 1rem;
   font-family: "Anton", sans-serif;
   font-size: 30px;
@@ -816,11 +816,15 @@ body {
   font-family: "Raleway", sans-serif;
   color: #3acc00;
 }
-.overlay .overlay-content p {
+.overlay .overlay-content .overlay-description {
   background-color: #383838;
   border-radius: 3px;
   padding: 1rem;
   color: #bababa;
+}
+.overlay .overlay-content .overlay-description h1 {
+  font-size: 20px;
+  color: #e0e0e0;
 }
 .overlay .overlay-content .overlay-items {
   display: flex;
@@ -847,7 +851,7 @@ body {
     width: 100%;
     padding: 0;
   }
-  .overlay .overlay-content h1 {
+  .overlay .overlay-content .overlay-h1 {
     font-size: 30px;
     padding: 1rem;
   }

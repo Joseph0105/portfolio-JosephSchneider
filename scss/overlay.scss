@@ -54,24 +54,29 @@
       }
     }
 
-    h1 {
+    .overlay-h1 {
       margin-bottom: 1rem;
       font-family: "Anton", sans-serif;
       font-size: 30px;
       font-weight: 300;
       color: darken($text-color-primary, $amount: 10);
     }
+
     h2 {
       font-size: 20px;
       font-family: "Raleway", sans-serif;
       color: darken($text-color-primary, $amount: 10);
     }
 
-    p {
+    .overlay-description {
       background-color: lighten($overlay-background-color, $amount: 5);
       border-radius: 3px;
       padding: 1rem;
       color: lighten($text-color-grey, $amount: 5);
+      h1 {
+        font-size: 20px;
+        color: lighten($text-color-grey, $amount: 20);
+      }
     }
 
     .overlay-items {
