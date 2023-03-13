@@ -166,7 +166,7 @@ body {
 .section-home .menu a {
   text-decoration: none;
   color: rgb(173, 173, 173);
-  font-size: 25px;
+  font-size: 30px;
 }
 .section-home .menu a:hover {
   color: #0fc730;
@@ -367,6 +367,152 @@ body {
   border: none;
 }
 
+@media screen and (min-width: 1440px) {
+  .section-home .bar-icon {
+    font-size: 5rem;
+    width: 6rem;
+  }
+  .section-home .menu .icone-border i {
+    font-size: 30px;
+  }
+  .section-home .menu .icone-border a {
+    font-size: 40px;
+  }
+  .section-home .menu .icone-border .go-to-contact i {
+    font-size: 60px;
+  }
+  .section-home .scroll-down p {
+    font-size: 30px;
+  }
+  .section-home .scroll-down i {
+    font-size: 30px;
+  }
+  .section-home .text-zone h1 {
+    font-size: 90px;
+  }
+  .section-home .text-zone h1 span {
+    font-size: 98px;
+  }
+  .section-home .text-zone p {
+    font-size: 30px;
+  }
+  .section-home .link-contain a {
+    width: 180px;
+    height: 80px;
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .section-home {
+    background-size: contain;
+  }
+  .section-home .bar-icon {
+    font-size: 1rem;
+    width: 2rem;
+  }
+  .section-home .menu .icone-border i {
+    font-size: 15px;
+  }
+  .section-home .menu a {
+    font-size: 20px;
+  }
+  .section-home .menu .go-to-contact i {
+    font-size: 40px;
+  }
+  .section-home .scroll-down p {
+    font-size: 15px;
+  }
+  .section-home .scroll-down i {
+    font-size: 15px;
+  }
+  .section-home .text-zone h1 {
+    font-size: 30px;
+  }
+  .section-home .text-zone h1 span {
+    font-size: 38px;
+  }
+  .section-home .text-zone p {
+    font-size: 15px;
+  }
+  .section-home .link-contain a {
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .section-home .bar-icon {
+    font-size: 5rem;
+    width: 6rem;
+  }
+  .section-home .menu .icone-border i {
+    font-size: 30px;
+  }
+  .section-home .menu .icone-border a {
+    font-size: 40px;
+  }
+  .section-home .menu .icone-border .go-to-contact i {
+    font-size: 60px;
+  }
+  .section-home .scroll-down p {
+    font-size: 30px;
+  }
+  .section-home .scroll-down i {
+    font-size: 30px;
+  }
+  .section-home .text-zone h1 {
+    font-size: 90px;
+  }
+  .section-home .text-zone h1 span {
+    font-size: 98px;
+  }
+  .section-home .text-zone p {
+    font-size: 30px;
+  }
+  .section-home .link-contain a {
+    width: 180px;
+    height: 80px;
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .section-home {
+    background-size: contain;
+  }
+  .section-home .bar-icon {
+    font-size: 1rem;
+    width: 2rem;
+  }
+  .section-home .menu .icone-border i {
+    font-size: 15px;
+  }
+  .section-home .menu a {
+    font-size: 20px;
+  }
+  .section-home .menu .go-to-contact i {
+    font-size: 40px;
+  }
+  .section-home .scroll-down p {
+    font-size: 15px;
+  }
+  .section-home .scroll-down i {
+    font-size: 15px;
+  }
+  .section-home .text-zone h1 {
+    font-size: 30px;
+  }
+  .section-home .text-zone h1 span {
+    font-size: 38px;
+  }
+  .section-home .text-zone p {
+    font-size: 15px;
+  }
+  .section-home .link-contain a {
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+  }
+}
 .portfolio {
   padding: 3rem 3rem;
 }

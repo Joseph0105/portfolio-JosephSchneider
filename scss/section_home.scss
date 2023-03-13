@@ -64,7 +64,7 @@
     a {
       text-decoration: none;
       color: $text-color-grey;
-      font-size: 25px;
+      font-size: 30px;
       &:hover {
         color: $element-color-primary;
       }
@@ -228,3 +228,4 @@
   height: 100%;
   border: none;
 }
+@import "./media_queries/media_home.scss";
