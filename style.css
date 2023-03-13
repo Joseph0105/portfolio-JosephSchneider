@@ -367,7 +367,7 @@ body {
   border: none;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 2240px) {
   .section-home .bar-icon {
     font-size: 5rem;
     width: 6rem;
@@ -440,7 +440,7 @@ body {
     font-size: 15px;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 2240px) {
   .section-home .bar-icon {
     font-size: 5rem;
     width: 6rem;
