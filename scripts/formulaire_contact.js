@@ -73,6 +73,11 @@ clickForm2.addEventListener("click", function (e) {
 // Fermer le form
 
 const contactFormContainer = document.querySelector(".contact-form");
+const closeForm = document.querySelector(".close-form");
+
+closeForm.addEventListener("click", function (e) {
+  contactFormDisplay.style.display = "none";
+});
 
 contactFormDisplay.addEventListener("click", function (e) {
   if (

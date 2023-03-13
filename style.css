@@ -1052,6 +1052,18 @@ body {
   display: flex;
   flex-direction: column;
 }
+.form-contact form .close-form {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+.form-contact form .close-form i {
+  font-size: 30px;
+}
+.form-contact form .close-form i :hover {
+  transform: scale(1.1);
+  background-color: #0fc730;
+}
 .form-contact form input,
 .form-contact form textarea {
   background-color: #333333;
@@ -1146,6 +1158,32 @@ body {
 }
 .form-contact form button:hover span {
   color: #414141;
+}
+
+@media screen and (max-width: 440px) {
+  .contact-container {
+    width: 100%;
+  }
+  .contact-container form {
+    width: 100%;
+    left: 0%;
+  }
+  .contact-container form h2 {
+    font-size: 25px;
+    margin-top: 0;
+  }
+  .contact-container form .email-address input {
+    width: 100%;
+  }
+  .contact-container form textarea {
+    height: 80%;
+  }
+  .contact-container form .close-form {
+    top: 20px;
+  }
+  .contact-container form .close-form i {
+    font-size: 30px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
