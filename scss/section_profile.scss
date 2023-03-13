@@ -6,10 +6,12 @@
   .About-me {
     margin-top: 50px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     .text-container {
       padding: 1rem;
-      width: 65%;
+
       background-color: $overlay-background-color;
       border-radius: 5px;
 
@@ -22,7 +24,9 @@
     }
 
     img {
-      width: 30%;
+      width: 20%;
+      height: 20%;
+      margin-bottom: 10px;
       border-radius: 50%;
       border: solid 2px $text-color-white;
       transition: transform 0.1s cubic-bezier(0.42, -0.42, 0.63, 1);

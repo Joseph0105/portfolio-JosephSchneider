@@ -1,5 +1,9 @@
 .portfolio {
   padding: 3rem 3rem;
+  background-image: url(./Images/craft.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top 50px right;
 
   h2 {
     @include h2();
@@ -7,7 +11,8 @@
   p {
     margin-top: 2rem;
     margin-bottom: 1rem;
-    color: $text-color-grey;
+    color: lighten($text-color-grey, $amount: 10);
+    font-size: 18px;
   }
 }
 .projects-display {
