@@ -55,7 +55,20 @@ const overlayProjectItems = document.querySelector(".overlay-items");
 function displayOverlay(project) {
   overlayProjectName.textContent = project.name;
   overlayProjectLink.href = `https://joseph0105.github.io/${project.name}/`;
-  overlayProjectDescription.textContent = project.description;
+
+  let readmeUrl = `https://api.github.com/repos/Joseph0105/${project.name}/contents/README.md`;
+  let readmeContent;
+
+  fetch(readmeUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      let markdownContent = decodeURIComponent(escape(atob(data.content)));
+
+      let converter = new showdown.Converter();
+      let htmlContent = converter.makeHtml(markdownContent);
+      overlayProjectDescription.innerHTML = htmlContent;
+    })
+    .catch((error) => console.error(error));
 
   overlayProjectImg.src = `https://raw.githubusercontent.com/Joseph0105/${project.name}/main/img/preview.svg`;
 
