@@ -22,6 +22,11 @@ function getProjects() {
           data.splice(i, 1);
         }
       }
+      data.sort(function (a, b) {
+        var dateA = new Date(a.created_at);
+        var dateB = new Date(b.created_at);
+        return dateB - dateA;
+      });
 
       const repositories = data;
       const repositoriesDisplay = document.querySelector(".projects-display");
