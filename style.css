@@ -742,7 +742,6 @@ body {
 .overlay .overlay-content .overlay-img {
   width: 100%;
   object-fit: cover;
-  box-shadow: 3px 3px 10px #c8c8c8;
   margin-bottom: 1rem;
 }
 .overlay .overlay-content .link-items {
@@ -1058,7 +1057,7 @@ body {
   top: 10px;
 }
 .form-contact form .close-form i {
-  font-size: 30px;
+  font-size: 20px;
 }
 .form-contact form .close-form i :hover {
   transform: scale(1.1);
@@ -1105,7 +1104,12 @@ body {
   width: 100%;
 }
 .form-contact form .email-message {
-  height: 220px;
+  height: 35%;
+}
+@media screen and (min-width: 1500px) {
+  .form-contact form .email-message {
+    height: 60%;
+  }
 }
 .form-contact form .email-message textarea {
   width: 100%;
