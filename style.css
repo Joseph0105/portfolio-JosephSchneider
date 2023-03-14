@@ -100,10 +100,37 @@ body {
   background-color: #1d1d1d;
 }
 
+:root {
+  --blob-color: 255, 255, 255;
+  --blob-x: 1;
+  --blob-y: 1;
+}
+
+.blob {
+  z-index: 2;
+  position: absolute;
+  display: block;
+  width: 40vmin;
+  height: 40vmin;
+  border-radius: 50%;
+  filter: blur(5vmin);
+  background: radial-gradient(ellipse at center, rgba(var(--blob-color), 0.7) 0%, rgba(var(--blob-color), 0.65) 100%);
+  mix-blend-mode: difference;
+  top: calc(var(--mouse-y) * 1px);
+  left: calc(var(--mouse-x) * 1px);
+  transform: translate3d(-50%, -50%, 0);
+  pointer-events: none;
+}
+
+.hide-blob {
+  display: none;
+}
+
 .section-home {
+  z-index: 1;
   padding: 3rem 3rem;
   height: 100vh;
-  background-image: url(./Images/backgroun-green.png);
+  background-image: url(/Images/backgroun-green.png);
   background-size: cover;
 }
 .section-home .bar-icon {
@@ -262,7 +289,7 @@ body {
   font-size: 50px;
   font-weight: 400;
 }
-.section-home .text-zone h1 span {
+.section-home .text-zone h1 .spane-Upercase {
   font-size: 58px;
   color: #48ff00;
   -webkit-text-stroke: 1px;
@@ -273,6 +300,10 @@ body {
   margin-top: 10px;
   font-family: "Raleway", sans-serif;
   color: rgb(173, 173, 173);
+}
+.section-home .link-contain {
+  position: absolute;
+  z-index: 2;
 }
 .section-home .link-contain .bg {
   left: 0%;
@@ -321,6 +352,8 @@ body {
   margin-right: 0.5rem;
 }
 .section-home .link-contain a {
+  position: absolute;
+  z-index: 2;
   margin-top: 80px;
   margin-left: 30px;
   border: 1px solid #0af637;
@@ -329,7 +362,8 @@ body {
   height: 50px;
 }
 .section-home .link-contain a:hover {
-  border: 1px solid #0af637;
+  z-index: 3;
+  border: 1px solid white;
 }
 .section-home .link-contain a:hover span {
   color: white;
@@ -346,11 +380,12 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 999;
+  z-index: 3;
 }
 
 .cv-container {
   position: absolute;
+  z-index: 3;
   top: 5%;
   left: 10%;
   transform: translateY(-50%, -50%);
@@ -393,6 +428,9 @@ body {
   .section-home .text-zone h1 span {
     font-size: 98px;
   }
+  .section-home .text-zone h1 .spane-Upercase {
+    font-size: 108px;
+  }
   .section-home .text-zone p {
     font-size: 30px;
   }
@@ -426,9 +464,12 @@ body {
     font-size: 15px;
   }
   .section-home .text-zone h1 {
-    font-size: 30px;
+    font-size: 20px;
   }
   .section-home .text-zone h1 span {
+    font-size: 28px;
+  }
+  .section-home .text-zone h1 .spane-Upercase {
     font-size: 38px;
   }
   .section-home .text-zone p {
@@ -466,6 +507,9 @@ body {
   .section-home .text-zone h1 span {
     font-size: 98px;
   }
+  .section-home .text-zone h1 .spane-Upercase {
+    font-size: 108px;
+  }
   .section-home .text-zone p {
     font-size: 30px;
   }
@@ -499,9 +543,12 @@ body {
     font-size: 15px;
   }
   .section-home .text-zone h1 {
-    font-size: 30px;
+    font-size: 20px;
   }
   .section-home .text-zone h1 span {
+    font-size: 28px;
+  }
+  .section-home .text-zone h1 .spane-Upercase {
     font-size: 38px;
   }
   .section-home .text-zone p {

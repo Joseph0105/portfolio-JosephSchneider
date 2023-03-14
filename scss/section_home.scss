@@ -1,7 +1,35 @@
+:root {
+  --blob-color: 255, 255, 255;
+  --blob-x: 1;
+  --blob-y: 1;
+}
+.blob {
+  z-index: 2;
+  position: absolute;
+  display: block;
+  width: 40vmin;
+  height: 40vmin;
+  border-radius: 50%;
+  filter: blur(5vmin);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(var(--blob-color), 0.7) 0%,
+    rgba(var(--blob-color), 0.65) 100%
+  );
+  mix-blend-mode: difference;
+  top: calc(var(--mouse-y) * 1px);
+  left: calc(var(--mouse-x) * 1px);
+  transform: translate3d(-50%, -50%, 0);
+  pointer-events: none;
+}
+.hide-blob {
+  display: none;
+}
 .section-home {
+  z-index: 1;
   padding: 3rem 3rem;
   height: 100vh;
-  background-image: url(./Images/backgroun-green.png);
+  background-image: url(/Images/backgroun-green.png);
   background-size: cover;
 
   .bar-icon {
@@ -44,6 +72,7 @@
     &.open {
       transform: translateY(0%);
     }
+
     .icone-border {
       border-bottom: 1px solid $text-color-grey;
 
@@ -163,7 +192,7 @@
     h1 {
       font-size: 50px;
       font-weight: 400;
-      span {
+      .spane-Upercase {
         font-size: 58px;
         color: $text-color-primary;
         -webkit-text-stroke: 1px;
@@ -181,7 +210,13 @@
 
   .link-contain {
     @include fillLinkBackground;
+    position: absolute;
+    z-index: 2;
+
     a {
+      position: absolute;
+      z-index: 2;
+
       margin-top: 80px;
       margin-left: 30px;
       border: 1px solid #0af637;
@@ -189,7 +224,8 @@
       width: 150px;
       height: 50px;
       &:hover {
-        border: 1px solid #0af637;
+        z-index: 3;
+        border: 1px solid white;
         span {
           color: $text-color-white;
         }
@@ -205,14 +241,16 @@
   position: fixed;
   top: 0;
   left: 0;
+
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 999;
+  z-index: 3;
 }
 
 .cv-container {
   position: absolute;
+  z-index: 3;
   top: 5%;
   left: 10%;
   transform: translateY(-50%, -50%);

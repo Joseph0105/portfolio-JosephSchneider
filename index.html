@@ -11,11 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@100&display=swap"
       rel="stylesheet"
     />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://kit.fontawesome.com/287a4653ff.css"
       crossorigin="anonymous"
-    />
+    /> -->
 
     <script
       src="https://kit.fontawesome.com/287a4653ff.js"
@@ -31,7 +31,10 @@
       <span class="loader loader_circles"></span>
       <span class="load-text">Chargement...</span>
     </section>
+
     <section class="section-home">
+      <div id="mode-circle"></div>
+      <div class="blob" id="blob"></div>
       <div class="bar-icon">
         <i class="fa-solid fa-bars"></i>
       </div>
@@ -69,29 +72,48 @@
         <i class="fa-solid fa-arrow-down"></i>
       </div>
       <div class="text-zone">
-        <h1>
-          Salut,<br />
-          je suis <span class="span-name">J</span>oseph
-          <span class="span-name">S</span>chneider
-        </h1>
-        <p class="home-text">
-          Développeur web orienté Frontend, intégrateur web.
-        </p>
-        <br />
-
-        <div class="link-contain">
-          <a class="CV-link" href="#">
-            <span class="bg"></span>
-            <span>Mon CV</span>
-          </a>
+        <div class="title">
+          <h1>
+            <span>S</span><span>a</span><span>l</span><span>u</span
+            ><span>t</span><span>,</span><br />
+            <span>j</span><span>e</span><span> </span><span>s</span
+            ><span>u</span><span>i</span><span>s</span>
+            <span class="spane-Upercase">J</span><span>o</span><span>s</span
+            ><span>e</span><span>p</span><span>h</span>
+            <span class="spane-Upercase">S</span><span>c</span><span>h</span
+            ><span>n</span><span>e</span><span>i</span><span>d</span
+            ><span>e</span><span>r</span>
+          </h1>
+          <p class="home-text">
+            <span>D</span><span>&#233;</span><span>v</span><span>&#233;</span
+            ><span>l</span><span>o</span><span>p</span><span>e</span
+            ><span>u</span><span>r</span> <span>&nbsp;</span><span>w</span
+            ><span>e</span><span>b</span><span>&nbsp;</span><span>o</span
+            ><span>r</span><span>i</span><span>e</span><span>n</span
+            ><span>t</span><span>&#233;</span> <span>&nbsp;</span><span>F</span
+            ><span>r</span><span>o</span><span>n</span><span>t</span
+            ><span>e</span><span>n</span><span>d</span><span>,</span>
+            <span>&nbsp;</span><span>i</span><span>n</span><span>t</span
+            ><span>&#233;</span><span>g</span><span>r</span><span>a</span
+            ><span>t</span><span>e</span><span>u</span><span>r</span>
+            <span>&nbsp;</span><span>w</span><span>e</span><span>b</span
+            ><span>.</span>
+          </p>
+          <br />
         </div>
-        <div class="cv-modal">
-          <div class="cv-container">
-            <iframe
-              class="cv-iframe"
-              src="./ressources/CV_JosephSchneider_Dev.pdf"
-            ></iframe>
-          </div>
+      </div>
+      <div class="link-contain">
+        <a class="CV-link" href="#">
+          <span class="bg"></span>
+          <span>Mon CV</span>
+        </a>
+      </div>
+      <div class="cv-modal">
+        <div class="cv-container">
+          <iframe
+            class="cv-iframe"
+            src="./ressources/CV_JosephSchneider_Dev.pdf"
+          ></iframe>
         </div>
       </div>
     </section>
@@ -232,7 +254,7 @@
                 action="https://formspree.io/f/xgebzopo"
                 method="POST"
               >
-                <h2>Ecrivez moi :</h2>
+                <h2>Écrivez moi :</h2>
                 <div class="close-form">
                   <i class="fa-sharp fa-solid fa-xmark"></i>
                 </div>
@@ -294,5 +316,6 @@
     <script src="./scripts/overlay.js"></script>
     <script src="./scripts/formulaire_contact.js"></script>
     <script src="./scripts/scroll.js"></script>
+    <script type="module" src="./scripts/blob.js"></script>
   </body>
 </html>
