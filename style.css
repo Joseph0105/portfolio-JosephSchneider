@@ -134,13 +134,7 @@ body {
   z-index: 1;
   padding: 3rem 3rem;
   height: 100vh;
-<<<<<<< HEAD
-
-  background-image: url(/Images/background-green.png);
-=======
- background-image: url(./Images/background-green.png);
->>>>>>> ece3ae764790d241584dd8b204a241481f133ce7
-
+  background-image: url(./Images/background-green.png);
   background-size: cover;
 }
 .section-home .bar-icon {
