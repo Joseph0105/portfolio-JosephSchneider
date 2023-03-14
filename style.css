@@ -134,11 +134,9 @@ body {
   z-index: 1;
   padding: 3rem 3rem;
   height: 100vh;
-<<<<<<< HEAD
+
   background-image: url(/Images/backgroun-green.png);
-=======
-  background-image: url(/portfolio-JosephSchneider/Images/backgroun-green.png);
->>>>>>> a085a88b0e506e34f02508856d224bd8b6acacbe
+
   background-size: cover;
 }
 .section-home .bar-icon {
