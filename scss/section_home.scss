@@ -257,13 +257,17 @@
   z-index: 3;
   .cv-close {
     position: absolute;
-    top: 40px;
-    right: 100px;
+    top: 3%;
+    left: 3%;
+
     background-color: transparent;
     border: none;
     color: $text-color-grey;
     cursor: pointer;
     font-size: 20px;
+    i {
+      font-size: 2rem;
+    }
   }
 }
 

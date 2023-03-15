@@ -392,13 +392,16 @@ body {
 }
 .cv-modal .cv-close {
   position: absolute;
-  top: 40px;
-  right: 100px;
+  top: 3%;
+  left: 3%;
   background-color: transparent;
   border: none;
   color: rgb(173, 173, 173);
   cursor: pointer;
   font-size: 20px;
+}
+.cv-modal .cv-close i {
+  font-size: 2rem;
 }
 
 .cv-container {
