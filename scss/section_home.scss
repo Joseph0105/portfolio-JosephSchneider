@@ -217,16 +217,19 @@
     @include fillLinkBackground;
     position: absolute;
     z-index: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 300px;
+    width: 90%;
 
     a {
       position: absolute;
       z-index: 2;
 
-      margin-top: 80px;
-      margin-left: 30px;
       border: 1px solid #0af637;
       background-color: transparent;
-      width: 150px;
+      width: 15%;
       height: 50px;
       &:hover {
         z-index: 3;

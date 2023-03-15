@@ -309,6 +309,11 @@ body {
 .section-home .link-contain {
   position: absolute;
   z-index: 2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 300px;
+  width: 90%;
 }
 .section-home .link-contain .bg {
   left: 0%;
@@ -359,11 +364,9 @@ body {
 .section-home .link-contain a {
   position: absolute;
   z-index: 2;
-  margin-top: 80px;
-  margin-left: 30px;
   border: 1px solid #0af637;
   background-color: transparent;
-  width: 150px;
+  width: 15%;
   height: 50px;
 }
 .section-home .link-contain a:hover {
@@ -447,6 +450,7 @@ body {
 @media screen and (max-width: 440px) {
   .section-home {
     background-size: contain;
+    padding: 1rem;
   }
   .section-home .bar-icon {
     font-size: 1rem;
@@ -467,8 +471,11 @@ body {
   .section-home .scroll-down i {
     font-size: 15px;
   }
+  .section-home .text-zone {
+    top: 5rem;
+  }
   .section-home .text-zone h1 {
-    font-size: 20px;
+    font-size: 18px;
   }
   .section-home .text-zone h1 span {
     font-size: 28px;
@@ -480,7 +487,8 @@ body {
     font-size: 15px;
   }
   .section-home .link-contain a {
-    width: 100px;
+    top: 50%;
+    width: 100%;
     height: 40px;
     font-size: 15px;
   }
@@ -526,6 +534,7 @@ body {
 @media screen and (max-width: 440px) {
   .section-home {
     background-size: contain;
+    padding: 1rem;
   }
   .section-home .bar-icon {
     font-size: 1rem;
@@ -546,8 +555,11 @@ body {
   .section-home .scroll-down i {
     font-size: 15px;
   }
+  .section-home .text-zone {
+    top: 5rem;
+  }
   .section-home .text-zone h1 {
-    font-size: 20px;
+    font-size: 18px;
   }
   .section-home .text-zone h1 span {
     font-size: 28px;
@@ -559,7 +571,8 @@ body {
     font-size: 15px;
   }
   .section-home .link-contain a {
-    width: 100px;
+    top: 50%;
+    width: 100%;
     height: 40px;
     font-size: 15px;
   }
