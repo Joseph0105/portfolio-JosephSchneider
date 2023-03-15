@@ -34,7 +34,20 @@ function getProjects() {
       return repositories;
     })
     .catch((error) => {
-      console.error(error);
+      const errorMsg = document.querySelector(".error-txt");
+      if (error.status === 403) {
+        errorMsg.style.display = "block";
+        errorMsg.textContent =
+          "Erreur" +
+          error.status +
+          "Victime de sons succès, l'API a étée appelée trop souvent pour le moment, revenez un peu plus tard";
+      } else {
+        errorMsg.style.display = "block";
+        errorMsg.textContent =
+          "l'erreur" +
+          error.status +
+          "a empêché l'accès à l'API, merci réessayez ultérieurement";
+      }
     });
 }
 

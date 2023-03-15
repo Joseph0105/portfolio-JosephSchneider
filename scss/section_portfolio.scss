@@ -19,10 +19,11 @@
   }
 }
 .projects-display {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 3rem;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-auto-rows: 300px;
+  grid-gap: 0;
+  width: 100%;
 
   .projectCard {
     min-width: 280px;
@@ -64,7 +65,7 @@
       top: 50%;
       left: 50%;
       width: 40%;
-      height: 50%;
+      height: 40%;
       border-radius: 50%;
       background-color: $element-color-primary;
       opacity: 0;
@@ -84,7 +85,17 @@
       }
     }
   }
+  .error-msg {
+    display: none;
+    background-color: $overlay-background-color;
+    width: 70%;
+    padding: 1rem;
 
+    p {
+      font-size: 20px;
+      color: lighten($error-msg, $amount: 15);
+    }
+  }
   @import "./media_queries/media_queries_portfolio.scss";
 
   .project-img {
