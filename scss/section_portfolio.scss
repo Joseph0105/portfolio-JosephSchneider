@@ -1,5 +1,5 @@
 .portfolio {
-  padding: 3rem 3rem;
+  padding: 0;
   background-image: url(./Images/craft.svg);
   background-size: contain;
   background-repeat: no-repeat;
@@ -7,12 +7,15 @@
 
   h2 {
     @include h2();
+    padding-left: 1rem;
   }
   p {
     margin-top: 2rem;
     margin-bottom: 1rem;
     color: lighten($text-color-grey, $amount: 10);
     font-size: 18px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 .projects-display {
@@ -22,8 +25,10 @@
   justify-content: center;
 
   .projectCard {
-    max-width: 370px;
-    width: 33%;
+    min-width: 280px;
+
+    gap: 0px;
+    width: 100%;
     height: 300px;
     overflow: hidden;
     position: relative;
@@ -31,7 +36,13 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-
+    box-sizing: border-box;
+    a {
+      width: 100%;
+      img {
+        object-fit: unset;
+      }
+    }
     @keyframes showClickHere {
       0% {
         opacity: 0;
@@ -73,6 +84,7 @@
       }
     }
   }
+
   @import "./media_queries/media_queries_portfolio.scss";
 
   .project-img {

@@ -447,7 +447,12 @@ body {
     font-size: 25px;
   }
 }
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 792px) {
+  .section-home {
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
   .section-home {
     background-size: contain;
     padding: 1rem;
@@ -531,7 +536,12 @@ body {
     font-size: 25px;
   }
 }
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 792px) {
+  .section-home {
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
   .section-home {
     background-size: contain;
     padding: 1rem;
@@ -578,7 +588,7 @@ body {
   }
 }
 .portfolio {
-  padding: 3rem 3rem;
+  padding: 0;
   background-image: url(./Images/craft.svg);
   background-size: contain;
   background-repeat: no-repeat;
@@ -589,12 +599,15 @@ body {
   font-family: "Anton", sans-serif;
   font-size: 40px;
   font-weight: 300;
+  padding-left: 1rem;
 }
 .portfolio p {
   margin-top: 2rem;
   margin-bottom: 1rem;
   color: #c7c7c7;
   font-size: 18px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .projects-display {
@@ -604,8 +617,9 @@ body {
   justify-content: center;
 }
 .projects-display .projectCard {
-  max-width: 370px;
-  width: 33%;
+  min-width: 280px;
+  gap: 0px;
+  width: 100%;
   height: 300px;
   overflow: hidden;
   position: relative;
@@ -613,6 +627,13 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  box-sizing: border-box;
+}
+.projects-display .projectCard a {
+  width: 100%;
+}
+.projects-display .projectCard a img {
+  object-fit: unset;
 }
 @keyframes showClickHere {
   0% {
@@ -651,30 +672,29 @@ body {
   color: white;
   margin: 0;
 }
-@media (max-width: 768px) {
-  .projects-display .projects-display {
-    justify-content: center;
-  }
-  .projects-display .projectCard {
-    width: 48%;
-  }
-  .projects-display .click-here {
-    width: 30%;
-    height: 50%;
-  }
-}
-@media (max-width: 490px) {
-  .projects-display .projects-display {
-    justify-content: center;
-  }
-  .projects-display .projectCard {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-}
 @media (min-width: 768px) {
   .projects-display .projectCard {
-    width: 33%;
+    width: 50%;
+  }
+}
+@media (min-width: 440px) and (max-width: 768px) {
+  .projects-display .projectCard .click-here {
+    width: 30%;
+  }
+}
+@media (min-width: 992px) {
+  .projects-display .projectCard {
+    width: 33.33%;
+  }
+}
+@media (min-width: 1440px) {
+  .projects-display .projectCard {
+    width: 25%;
+  }
+}
+@media (min-width: 2560px) {
+  .projects-display .projectCard {
+    width: 10%;
   }
 }
 .projects-display .project-img {
@@ -944,56 +964,54 @@ body {
     width: 200px !important;
   }
 }
-@media (max-width: 768px) {
-  .projects-display {
-    justify-content: center;
-  }
+@media (min-width: 768px) {
   .projectCard {
-    width: 48%;
-  }
-  .click-here {
-    width: 30%;
-    height: 50%;
+    width: 50%;
   }
 }
-@media (max-width: 490px) {
-  .projects-display {
-    justify-content: center;
+@media (min-width: 440px) and (max-width: 768px) {
+  .projectCard .click-here {
+    width: 30%;
   }
+}
+@media (min-width: 992px) {
   .projectCard {
-    width: 100%;
-    margin-bottom: 10px;
+    width: 33.33%;
+  }
+}
+@media (min-width: 1440px) {
+  .projectCard {
+    width: 25%;
+  }
+}
+@media (min-width: 2560px) {
+  .projectCard {
+    width: 10%;
   }
 }
 @media (min-width: 768px) {
   .projectCard {
-    width: 33%;
+    width: 50%;
   }
 }
-@media (max-width: 768px) {
-  .projects-display {
-    justify-content: center;
-  }
-  .projectCard {
-    width: 48%;
-  }
-  .click-here {
+@media (min-width: 440px) and (max-width: 768px) {
+  .projectCard .click-here {
     width: 30%;
-    height: 50%;
   }
 }
-@media (max-width: 490px) {
-  .projects-display {
-    justify-content: center;
-  }
+@media (min-width: 992px) {
   .projectCard {
-    width: 100%;
-    margin-bottom: 10px;
+    width: 33.33%;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
   .projectCard {
-    width: 33%;
+    width: 25%;
+  }
+}
+@media (min-width: 2560px) {
+  .projectCard {
+    width: 10%;
   }
 }
 .profile {

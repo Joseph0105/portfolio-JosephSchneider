@@ -50,7 +50,12 @@
     }
   }
 }
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 792px) {
+  .section-home {
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
   .section-home {
     background-size: contain;
     padding: 1rem;

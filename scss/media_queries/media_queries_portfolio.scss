@@ -1,26 +1,25 @@
-@media (max-width: 768px) {
-  .projects-display {
-    justify-content: center;
-  }
-  .projectCard {
-    width: 48%;
-  }
-  .click-here {
-    width: 30%;
-    height: 50%;
-  }
-}
-@media (max-width: 490px) {
-  .projects-display {
-    justify-content: center;
-  }
-  .projectCard {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-}
 @media (min-width: 768px) {
   .projectCard {
-    width: 33%;
+    width: 50%;
+  }
+}
+@media (min-width: 440px) and (max-width: 768px) {
+  .projectCard .click-here {
+    width: 30%;
+  }
+}
+@media (min-width: 992px) {
+  .projectCard {
+    width: 33.33%;
+  }
+}
+@media (min-width: 1440px) {
+  .projectCard {
+    width: 25%;
+  }
+}
+@media (min-width: 2560px) {
+  .projectCard {
+    width: 10%;
   }
 }
