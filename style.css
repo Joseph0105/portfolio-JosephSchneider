@@ -390,6 +390,16 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 3;
 }
+.cv-modal .cv-close {
+  position: absolute;
+  top: 40px;
+  right: 100px;
+  background-color: transparent;
+  border: none;
+  color: rgb(173, 173, 173);
+  cursor: pointer;
+  font-size: 20px;
+}
 
 .cv-container {
   position: absolute;

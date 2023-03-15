@@ -11,18 +11,25 @@ document.addEventListener('DOMContentLoaded', function () {
   const cvIframe = document.querySelector('.cv-iframe');
   const cvModal = document.querySelector('.cv-modal');
   const cvContainer = document.querySelector('.cv-container');
-
+  const cvClose = document.querySelector('.cv-close');
+  function closeCV(cvClose) {
+    cvClose.addEventListener('click', function (e) {
+      cvModal.style.display = 'none';
+    });
+  }
   if (isMobileDevice()) {
     cvLink.addEventListener('click', function (e) {
       e.preventDefault();
       cvIframe.src = cvIframe.getAttribute('data-src');
       cvModal.style.display = 'block';
+      closeCV();
     });
   } else {
     cvLink.addEventListener('click', function (e) {
       e.preventDefault();
       cvIframe.src = cvIframe.getAttribute('data-src');
       cvModal.style.display = 'block';
+      closeCV();
     });
 
     cvModal.addEventListener('click', function (e) {
