@@ -7,8 +7,8 @@
   z-index: 2;
   position: absolute;
   display: block;
-  width: 40vmin;
-  height: 40vmin;
+  width: 35vmin;
+  height: 35vmin;
   border-radius: 50%;
   filter: blur(5vmin);
   background: radial-gradient(
@@ -24,6 +24,11 @@
 }
 .hide-blob {
   display: none;
+}
+@media screen and (max-width: 768px) {
+  .blob {
+    display: none !important;
+  }
 }
 .section-home {
   z-index: 1;

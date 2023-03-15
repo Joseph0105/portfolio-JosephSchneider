@@ -110,15 +110,11 @@ body {
   z-index: 2;
   position: absolute;
   display: block;
-  width: 40vmin;
-  height: 40vmin;
+  width: 35vmin;
+  height: 35vmin;
   border-radius: 50%;
   filter: blur(5vmin);
-  background: radial-gradient(
-    ellipse at center,
-    rgba(var(--blob-color), 0.7) 0%,
-    rgba(var(--blob-color), 0.65) 100%
-  );
+  background: radial-gradient(ellipse at center, rgba(var(--blob-color), 0.7) 0%, rgba(var(--blob-color), 0.65) 100%);
   mix-blend-mode: difference;
   top: calc(var(--mouse-y) * 1px);
   left: calc(var(--mouse-x) * 1px);
@@ -130,11 +126,16 @@ body {
   display: none;
 }
 
+@media screen and (max-width: 768px) {
+  .blob {
+    display: none !important;
+  }
+}
 .section-home {
   z-index: 1;
   padding: 3rem 3rem;
   height: 100vh;
-  background-image: url(./Images/background-green.png);
+  background-image: url(/Images/background-green.png);
   background-size: cover;
 }
 .section-home .bar-icon {
